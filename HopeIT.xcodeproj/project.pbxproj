@@ -22,6 +22,12 @@
 		DDA41DD41FA39656007AE81D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDA41DD31FA39656007AE81D /* GoogleService-Info.plist */; };
 		DDA41DD71FA39925007AE81D /* Journey.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA41DD61FA39925007AE81D /* Journey.swift */; };
 		DDA41DDA1FA39ADE007AE81D /* JourneysViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA41DD91FA39ADE007AE81D /* JourneysViewModel.swift */; };
+		DDDDAC921FA3C804006C9CBA /* crayon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDA41DC61FA38BB7007AE81D /* crayon.ttf */; };
+		DDDDAC951FA3C8D6006C9CBA /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDDAC941FA3C8D6006C9CBA /* Utilities.swift */; };
+		DDDDAC981FA3CE3D006C9CBA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDDAC971FA3CE3D006C9CBA /* HomeViewModel.swift */; };
+		DDDDAC9A1FA3CE6F006C9CBA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDDAC991FA3CE6F006C9CBA /* User.swift */; };
+		DDDDAC9C1FA3D2D3006C9CBA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDDAC9B1FA3D2D3006C9CBA /* Extensions.swift */; };
+		DDDDAC9E1FA3D3FD006C9CBA /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDDAC9D1FA3D3FD006C9CBA /* CustomTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +42,7 @@
 		DDA41DBB1FA3764B007AE81D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDA41DBD1FA3764B007AE81D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDA41DC41FA38B62007AE81D /* LittleMissPriss.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LittleMissPriss.ttf; sourceTree = "<group>"; };
-		DDA41DC61FA38BB7007AE81D /* DK Crayon Crumble.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DK Crayon Crumble.ttf"; sourceTree = "<group>"; };
+		DDA41DC61FA38BB7007AE81D /* crayon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = crayon.ttf; sourceTree = "<group>"; };
 		DDA41DC71FA39148007AE81D /* HopeIT.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HopeIT.entitlements; sourceTree = "<group>"; };
 		DDA41DC81FA3924F007AE81D /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		DDA41DCB1FA3926E007AE81D /* JourneysViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JourneysViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +52,11 @@
 		DDA41DD31FA39656007AE81D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DDA41DD61FA39925007AE81D /* Journey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Journey.swift; sourceTree = "<group>"; };
 		DDA41DD91FA39ADE007AE81D /* JourneysViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JourneysViewModel.swift; sourceTree = "<group>"; };
+		DDDDAC941FA3C8D6006C9CBA /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		DDDDAC971FA3CE3D006C9CBA /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		DDDDAC991FA3CE6F006C9CBA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DDDDAC9B1FA3D2D3006C9CBA /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		DDDDAC9D1FA3D3FD006C9CBA /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,12 +109,12 @@
 		DDA41DB01FA3764B007AE81D /* HopeIT */ = {
 			isa = PBXGroup;
 			children = (
+				DDDDAC931FA3C8CC006C9CBA /* Others */,
 				DDA41DD51FA39919007AE81D /* Models */,
 				DDA41DC71FA39148007AE81D /* HopeIT.entitlements */,
 				DDA41DCA1FA39255007AE81D /* Controllers */,
 				DDA41DC31FA38B51007AE81D /* Assets */,
 				DDA41DB11FA3764B007AE81D /* AppDelegate.swift */,
-				DDA41DB31FA3764B007AE81D /* ViewController.swift */,
 				DDA41DB51FA3764B007AE81D /* Main.storyboard */,
 				DDA41DBA1FA3764B007AE81D /* LaunchScreen.storyboard */,
 				DDA41DD31FA39656007AE81D /* GoogleService-Info.plist */,
@@ -116,7 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				DDA41DC41FA38B62007AE81D /* LittleMissPriss.ttf */,
-				DDA41DC61FA38BB7007AE81D /* DK Crayon Crumble.ttf */,
+				DDA41DC61FA38BB7007AE81D /* crayon.ttf */,
 				DDA41DB81FA3764B007AE81D /* Assets.xcassets */,
 			);
 			name = Assets;
@@ -125,11 +136,13 @@
 		DDA41DCA1FA39255007AE81D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DDDDAC961FA3CE29006C9CBA /* Home */,
 				DDA41DD81FA39ACA007AE81D /* Journeys */,
 				DDA41DC81FA3924F007AE81D /* TutorialViewController.swift */,
 				DDA41DCD1FA3929E007AE81D /* JourneyConfiguratorViewController.swift */,
 				DDA41DCF1FA392B5007AE81D /* PaymentViewController.swift */,
-				DDA41DD11FA39316007AE81D /* HomeViewController.swift */,
+				DDA41DB31FA3764B007AE81D /* ViewController.swift */,
+				DDDDAC9D1FA3D3FD006C9CBA /* CustomTabBarController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -138,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				DDA41DD61FA39925007AE81D /* Journey.swift */,
+				DDDDAC991FA3CE6F006C9CBA /* User.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -149,6 +163,24 @@
 				DDA41DD91FA39ADE007AE81D /* JourneysViewModel.swift */,
 			);
 			name = Journeys;
+			sourceTree = "<group>";
+		};
+		DDDDAC931FA3C8CC006C9CBA /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				DDDDAC941FA3C8D6006C9CBA /* Utilities.swift */,
+				DDDDAC9B1FA3D2D3006C9CBA /* Extensions.swift */,
+			);
+			name = Others;
+			sourceTree = "<group>";
+		};
+		DDDDAC961FA3CE29006C9CBA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DDA41DD11FA39316007AE81D /* HomeViewController.swift */,
+				DDDDAC971FA3CE3D006C9CBA /* HomeViewModel.swift */,
+			);
+			name = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,10 +219,10 @@
 					DDA41DAD1FA3764B007AE81D = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = K36E9SFT27;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -223,6 +255,7 @@
 				DDA41DBC1FA3764B007AE81D /* LaunchScreen.storyboard in Resources */,
 				DDA41DB91FA3764B007AE81D /* Assets.xcassets in Resources */,
 				DDA41DC51FA38B62007AE81D /* LittleMissPriss.ttf in Resources */,
+				DDDDAC921FA3C804006C9CBA /* crayon.ttf in Resources */,
 				DDA41DB71FA3764B007AE81D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,13 +316,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDA41DB41FA3764B007AE81D /* ViewController.swift in Sources */,
+				DDDDAC981FA3CE3D006C9CBA /* HomeViewModel.swift in Sources */,
 				DDA41DD01FA392B6007AE81D /* PaymentViewController.swift in Sources */,
 				DDA41DDA1FA39ADE007AE81D /* JourneysViewModel.swift in Sources */,
 				DDA41DCE1FA3929E007AE81D /* JourneyConfiguratorViewController.swift in Sources */,
 				DDA41DCC1FA3926E007AE81D /* JourneysViewController.swift in Sources */,
 				DDA41DD71FA39925007AE81D /* Journey.swift in Sources */,
 				DDA41DC91FA3924F007AE81D /* TutorialViewController.swift in Sources */,
+				DDDDAC9E1FA3D3FD006C9CBA /* CustomTabBarController.swift in Sources */,
+				DDDDAC9C1FA3D2D3006C9CBA /* Extensions.swift in Sources */,
+				DDDDAC9A1FA3CE6F006C9CBA /* User.swift in Sources */,
 				DDA41DD21FA39316007AE81D /* HomeViewController.swift in Sources */,
+				DDDDAC951FA3C8D6006C9CBA /* Utilities.swift in Sources */,
 				DDA41DB21FA3764B007AE81D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,16 +454,17 @@
 			baseConfigurationReference = AACE9BDAB7724BFF90753561 /* Pods-HopeIT.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HopeIT/HopeIT.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Dmitrij Zatuchin (8P6ETA9H66)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = K36E9SFT27;
 				INFOPLIST_FILE = HopeIT/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dook.kosmo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dook.Astronaut;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c0d2a421-f279-41c7-b6bd-3eb5dde73248";
-				PROVISIONING_PROFILE_SPECIFIER = kosmo;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -435,13 +474,14 @@
 			baseConfigurationReference = 8EC03EF05440EFAA899E27CB /* Pods-HopeIT.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HopeIT/HopeIT.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Dmitrij Zatuchin (8P6ETA9H66)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = K36E9SFT27;
 				INFOPLIST_FILE = HopeIT/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dook.kosmo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dook.Astronaut;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;

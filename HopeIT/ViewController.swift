@@ -9,17 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    private enum Constants {
+        static let segueTabBar = "toTab"
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        Utilities.performAfter(delay: 2.0) { [unowned self] in
+            self.performSegue(withIdentifier: Constants.segueTabBar, sender: nil)
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 

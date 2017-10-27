@@ -1,5 +1,5 @@
 //
-//  JourneysViewController.swift
+//  CustomTabBarController.swift
 //  HopeIT
 //
 //  Created by Piotr Olejnik on 27.10.2017.
@@ -8,14 +8,12 @@
 
 import UIKit
 
-class JourneysViewController: UIViewController {
-    
-    private let journeysViewModel = JourneysViewModel()
+class CustomTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        selectedIndex = 2
     }
     
 }

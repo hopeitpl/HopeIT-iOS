@@ -1,4 +1,5 @@
-platform :ios, ’10.0’
+
+platform :ios, '9.0'
 
 target 'HopeIT' do
   use_frameworks!
@@ -8,8 +9,8 @@ target 'HopeIT' do
   pod 'DottedProgressBar'
   pod 'Firebase/Core'
   pod 'BRYXBanner', '~> 0.7.1'
-  pod 'RxSwift', :git => 'https://github.com/ReactiveX/RxSwift.git’, :branch => 'rxswift-3.0'
-  pod 'RxCocoa’, :git => 'https://github.com/ReactiveX/RxSwift.git’, :branch => 'rxswift-3.0'
-  pod 'RxGesture’, :git => 'https://github.com/RxSwiftCommunity/RxGesture.git’, :branch => 'swift-3’
+  pod 'RxSwift', :git => 'https://github.com/ReactiveX/RxSwift.git', :branch => 'rxswift-3.0'
+  pod 'RxCocoa', :git => 'https://github.com/ReactiveX/RxSwift.git', :branch => 'rxswift-3.0'
+  pod 'RxGesture', :git => 'https://github.com/RxSwiftCommunity/RxGesture.git', :branch => 'swift-3'
 
 end
