@@ -7,14 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B3A4EABB5F5ED2B1A598BD55 /* Pods_HopeIT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 547E87F678DD9DD563F30F55 /* Pods_HopeIT.framework */; };
 		DDA41DB21FA3764B007AE81D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA41DB11FA3764B007AE81D /* AppDelegate.swift */; };
 		DDA41DB41FA3764B007AE81D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA41DB31FA3764B007AE81D /* ViewController.swift */; };
 		DDA41DB71FA3764B007AE81D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDA41DB51FA3764B007AE81D /* Main.storyboard */; };
 		DDA41DB91FA3764B007AE81D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDA41DB81FA3764B007AE81D /* Assets.xcassets */; };
 		DDA41DBC1FA3764B007AE81D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDA41DBA1FA3764B007AE81D /* LaunchScreen.storyboard */; };
+		DDA41DC51FA38B62007AE81D /* LittleMissPriss.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDA41DC41FA38B62007AE81D /* LittleMissPriss.ttf */; };
+		DDA41DC91FA3924F007AE81D /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA41DC81FA3924F007AE81D /* TutorialViewController.swift */; };
+		DDA41DCC1FA3926E007AE81D /* JourneysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA41DCB1FA3926E007AE81D /* JourneysViewController.swift */; };
+		DDA41DCE1FA3929E007AE81D /* JourneyConfiguratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA41DCD1FA3929E007AE81D /* JourneyConfiguratorViewController.swift */; };
+		DDA41DD01FA392B6007AE81D /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA41DCF1FA392B5007AE81D /* PaymentViewController.swift */; };
+		DDA41DD21FA39316007AE81D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA41DD11FA39316007AE81D /* HomeViewController.swift */; };
+		DDA41DD41FA39656007AE81D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDA41DD31FA39656007AE81D /* GoogleService-Info.plist */; };
+		DDA41DD71FA39925007AE81D /* Journey.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA41DD61FA39925007AE81D /* Journey.swift */; };
+		DDA41DDA1FA39ADE007AE81D /* JourneysViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA41DD91FA39ADE007AE81D /* JourneysViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		547E87F678DD9DD563F30F55 /* Pods_HopeIT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HopeIT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EC03EF05440EFAA899E27CB /* Pods-HopeIT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HopeIT.release.xcconfig"; path = "Pods/Target Support Files/Pods-HopeIT/Pods-HopeIT.release.xcconfig"; sourceTree = "<group>"; };
+		AACE9BDAB7724BFF90753561 /* Pods-HopeIT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HopeIT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HopeIT/Pods-HopeIT.debug.xcconfig"; sourceTree = "<group>"; };
 		DDA41DAE1FA3764B007AE81D /* HopeIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HopeIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDA41DB11FA3764B007AE81D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDA41DB31FA3764B007AE81D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +35,17 @@
 		DDA41DB81FA3764B007AE81D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDA41DBB1FA3764B007AE81D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDA41DBD1FA3764B007AE81D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDA41DC41FA38B62007AE81D /* LittleMissPriss.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LittleMissPriss.ttf; sourceTree = "<group>"; };
+		DDA41DC61FA38BB7007AE81D /* DK Crayon Crumble.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DK Crayon Crumble.ttf"; sourceTree = "<group>"; };
+		DDA41DC71FA39148007AE81D /* HopeIT.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HopeIT.entitlements; sourceTree = "<group>"; };
+		DDA41DC81FA3924F007AE81D /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		DDA41DCB1FA3926E007AE81D /* JourneysViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JourneysViewController.swift; sourceTree = "<group>"; };
+		DDA41DCD1FA3929E007AE81D /* JourneyConfiguratorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JourneyConfiguratorViewController.swift; sourceTree = "<group>"; };
+		DDA41DCF1FA392B5007AE81D /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		DDA41DD11FA39316007AE81D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DDA41DD31FA39656007AE81D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DDA41DD61FA39925007AE81D /* Journey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Journey.swift; sourceTree = "<group>"; };
+		DDA41DD91FA39ADE007AE81D /* JourneysViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JourneysViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +53,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3A4EABB5F5ED2B1A598BD55 /* Pods_HopeIT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10949F035DBF7B5DC36DAD66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				547E87F678DD9DD563F30F55 /* Pods_HopeIT.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C80AFA085AE5C019BDD7F08A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AACE9BDAB7724BFF90753561 /* Pods-HopeIT.debug.xcconfig */,
+				8EC03EF05440EFAA899E27CB /* Pods-HopeIT.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DDA41DA51FA3764B007AE81D = {
 			isa = PBXGroup;
 			children = (
 				DDA41DB01FA3764B007AE81D /* HopeIT */,
 				DDA41DAF1FA3764B007AE81D /* Products */,
+				C80AFA085AE5C019BDD7F08A /* Pods */,
+				10949F035DBF7B5DC36DAD66 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +98,57 @@
 		DDA41DB01FA3764B007AE81D /* HopeIT */ = {
 			isa = PBXGroup;
 			children = (
+				DDA41DD51FA39919007AE81D /* Models */,
+				DDA41DC71FA39148007AE81D /* HopeIT.entitlements */,
+				DDA41DCA1FA39255007AE81D /* Controllers */,
+				DDA41DC31FA38B51007AE81D /* Assets */,
 				DDA41DB11FA3764B007AE81D /* AppDelegate.swift */,
 				DDA41DB31FA3764B007AE81D /* ViewController.swift */,
 				DDA41DB51FA3764B007AE81D /* Main.storyboard */,
-				DDA41DB81FA3764B007AE81D /* Assets.xcassets */,
 				DDA41DBA1FA3764B007AE81D /* LaunchScreen.storyboard */,
+				DDA41DD31FA39656007AE81D /* GoogleService-Info.plist */,
 				DDA41DBD1FA3764B007AE81D /* Info.plist */,
 			);
 			path = HopeIT;
+			sourceTree = "<group>";
+		};
+		DDA41DC31FA38B51007AE81D /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				DDA41DC41FA38B62007AE81D /* LittleMissPriss.ttf */,
+				DDA41DC61FA38BB7007AE81D /* DK Crayon Crumble.ttf */,
+				DDA41DB81FA3764B007AE81D /* Assets.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		DDA41DCA1FA39255007AE81D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DDA41DD81FA39ACA007AE81D /* Journeys */,
+				DDA41DC81FA3924F007AE81D /* TutorialViewController.swift */,
+				DDA41DCD1FA3929E007AE81D /* JourneyConfiguratorViewController.swift */,
+				DDA41DCF1FA392B5007AE81D /* PaymentViewController.swift */,
+				DDA41DD11FA39316007AE81D /* HomeViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		DDA41DD51FA39919007AE81D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DDA41DD61FA39925007AE81D /* Journey.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		DDA41DD81FA39ACA007AE81D /* Journeys */ = {
+			isa = PBXGroup;
+			children = (
+				DDA41DCB1FA3926E007AE81D /* JourneysViewController.swift */,
+				DDA41DD91FA39ADE007AE81D /* JourneysViewModel.swift */,
+			);
+			name = Journeys;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +158,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DDA41DC01FA3764B007AE81D /* Build configuration list for PBXNativeTarget "HopeIT" */;
 			buildPhases = (
+				95BB80D83D75310481F0B696 /* [CP] Check Pods Manifest.lock */,
 				DDA41DAA1FA3764B007AE81D /* Sources */,
 				DDA41DAB1FA3764B007AE81D /* Frameworks */,
 				DDA41DAC1FA3764B007AE81D /* Resources */,
+				B64004801BD1A0E047EB0E0A /* [CP] Embed Pods Frameworks */,
+				82F8865C384E0F5E9FF960D9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -97,7 +187,12 @@
 					DDA41DAD1FA3764B007AE81D = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = K36E9SFT27;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -124,13 +219,63 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDA41DD41FA39656007AE81D /* GoogleService-Info.plist in Resources */,
 				DDA41DBC1FA3764B007AE81D /* LaunchScreen.storyboard in Resources */,
 				DDA41DB91FA3764B007AE81D /* Assets.xcassets in Resources */,
+				DDA41DC51FA38B62007AE81D /* LittleMissPriss.ttf in Resources */,
 				DDA41DB71FA3764B007AE81D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		82F8865C384E0F5E9FF960D9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HopeIT/Pods-HopeIT-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95BB80D83D75310481F0B696 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B64004801BD1A0E047EB0E0A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HopeIT/Pods-HopeIT-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DDA41DAA1FA3764B007AE81D /* Sources */ = {
@@ -138,6 +283,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDA41DB41FA3764B007AE81D /* ViewController.swift in Sources */,
+				DDA41DD01FA392B6007AE81D /* PaymentViewController.swift in Sources */,
+				DDA41DDA1FA39ADE007AE81D /* JourneysViewModel.swift in Sources */,
+				DDA41DCE1FA3929E007AE81D /* JourneyConfiguratorViewController.swift in Sources */,
+				DDA41DCC1FA3926E007AE81D /* JourneysViewController.swift in Sources */,
+				DDA41DD71FA39925007AE81D /* Journey.swift in Sources */,
+				DDA41DC91FA3924F007AE81D /* TutorialViewController.swift in Sources */,
+				DDA41DD21FA39316007AE81D /* HomeViewController.swift in Sources */,
 				DDA41DB21FA3764B007AE81D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -186,6 +338,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -205,7 +358,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -236,6 +389,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -249,7 +403,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -259,26 +413,37 @@
 		};
 		DDA41DC11FA3764B007AE81D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AACE9BDAB7724BFF90753561 /* Pods-HopeIT.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Dmitrij Zatuchin (8P6ETA9H66)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = K36E9SFT27;
 				INFOPLIST_FILE = HopeIT/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = bydlaki.HopeIT;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dook.kosmo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "c0d2a421-f279-41c7-b6bd-3eb5dde73248";
+				PROVISIONING_PROFILE_SPECIFIER = kosmo;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		DDA41DC21FA3764B007AE81D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EC03EF05440EFAA899E27CB /* Pods-HopeIT.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = K36E9SFT27;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Dmitrij Zatuchin (8P6ETA9H66)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = HopeIT/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = bydlaki.HopeIT;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dook.kosmo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -302,6 +467,7 @@
 				DDA41DC21FA3764B007AE81D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

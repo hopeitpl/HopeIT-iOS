@@ -1,10 +1,15 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, ’10.0’
 
 target 'HopeIT' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-
-  # Pods for HopeIT
+  
+  pod 'PKHUD', '~> 4.0'
+  pod 'Alamofire', '~> 4.5'
+  pod 'DottedProgressBar'
+  pod 'Firebase/Core'
+  pod 'BRYXBanner', '~> 0.7.1'
+  pod 'RxSwift', :git => 'https://github.com/ReactiveX/RxSwift.git’, :branch => 'rxswift-3.0'
+  pod 'RxCocoa’, :git => 'https://github.com/ReactiveX/RxSwift.git’, :branch => 'rxswift-3.0'
+  pod 'RxGesture’, :git => 'https://github.com/RxSwiftCommunity/RxGesture.git’, :branch => 'swift-3’
 
 end
