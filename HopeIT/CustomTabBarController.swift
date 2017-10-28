@@ -27,7 +27,7 @@ class CustomTabBarController: UITabBarController {
         }
         
         NotificationCenter.default.addObserver(self, selector: #selector(actOnMessagesPush), name: Notification.Name("message"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(actOnPaymentPush(amount:)), name: Notification.Name("payment"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(actOnPaymentPush(_:)), name: Notification.Name("payment"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(goToMessages), name: Notification.Name("goToMessages"), object: nil)
     }
     
@@ -41,8 +41,10 @@ class CustomTabBarController: UITabBarController {
         }
     }
     
-    @objc private func actOnPaymentPush(amount: Int) {
-        presentPayment(amount: amount)
+    @objc private func actOnPaymentPush(_ notification: NSNotification) {
+        if let amount = notification.userInfo?["amount"] as? Int {
+            presentPayment(amount: amount)
+        }
     }
     
     @objc private func actOnMessagesPush() {

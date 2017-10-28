@@ -212,7 +212,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status misji" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYA-si-OIQ">
-                                                <rect key="frame" x="69" y="16" width="144" height="34.5"/>
+                                                <rect key="frame" x="68" y="16" width="144" height="34.5"/>
                                                 <fontDescription key="fontDescription" name="DKCrayonCrumble" family="DK Crayon Crumble" pointSize="35"/>
                                                 <color key="textColor" red="0.87843137250000003" green="0.019607843140000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -359,21 +359,11 @@ odliczanie!</string>
                                         </constraints>
                                         <state key="normal" image="close"/>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dodaj paliwa!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCK-2K-7xk">
-                                        <rect key="frame" x="48" y="0.0" width="224" height="44"/>
-                                        <fontDescription key="fontDescription" name="DKCrayonCrumble" family="DK Crayon Crumble" pointSize="24"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="zCK-2K-7xk" firstAttribute="top" secondItem="j2M-nm-unX" secondAttribute="top" id="Rdg-8T-9ox"/>
                                     <constraint firstAttribute="trailing" secondItem="9zc-1b-XF4" secondAttribute="trailing" constant="8" id="SQQ-2a-Qh8"/>
-                                    <constraint firstItem="zCK-2K-7xk" firstAttribute="centerX" secondItem="j2M-nm-unX" secondAttribute="centerX" id="TYz-gr-OsB"/>
                                     <constraint firstAttribute="bottom" secondItem="9zc-1b-XF4" secondAttribute="bottom" id="dQ0-ju-cli"/>
-                                    <constraint firstAttribute="bottom" secondItem="zCK-2K-7xk" secondAttribute="bottom" id="jyH-oo-96X"/>
-                                    <constraint firstItem="9zc-1b-XF4" firstAttribute="leading" secondItem="zCK-2K-7xk" secondAttribute="trailing" id="mRm-A2-VOa"/>
                                     <constraint firstItem="9zc-1b-XF4" firstAttribute="top" secondItem="j2M-nm-unX" secondAttribute="top" id="qN5-Eh-Iin"/>
                                     <constraint firstAttribute="height" constant="44" id="xL5-SV-lxb"/>
                                 </constraints>

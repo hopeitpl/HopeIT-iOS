@@ -20,7 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     var paymentAmount: Int?
     var openMessages = false
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         UITabBar.appearance().tintColor = UIColor.defaultBlue()
         UITabBar.appearance().shadowImage = UIImage()
@@ -72,13 +71,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Swift.Void) {
         let userInfo = notification.request.content.userInfo
-        let amount: Int? = userInfo["amount"] as? Int
+        var amount: Int? = nil
+        print((userInfo["aps"] as? [String: AnyObject])?["alert"])
+        if let a = (userInfo["aps"] as? [String: AnyObject])?["alert"] as? String, let int = Int(a) {
+            amount = int
+        }
         action(on: userInfo["type"] as! String, amount: amount)
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Swift.Void) {
         let userInfo = response.notification.request.content.userInfo
-        let amount: Int? = userInfo["amount"] as? Int
+        var amount: Int? = nil
+        print((userInfo["aps"] as? [String: AnyObject])?["alert"])
+        if let a = (userInfo["aps"] as? [String: AnyObject])?["alert"] as? String, let int = Int(a) {
+            amount = int
+        }
         action(on: userInfo["type"] as! String, amount: amount)
     }
 
@@ -90,7 +97,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         } else if type == "message" {
             NotificationCenter.default.post(name: Notification.Name("message"), object: nil)
         } else if type == "payment" {
-            NotificationCenter.default.post(name: Notification.Name("payment"), object: amount ?? 10)
+            NotificationCenter.default.post(name: Notification.Name("payment"), object: nil, userInfo: ["amount": amount ?? 10])
             content = "Czas wykonać zaplanowany przelew!"
         } else if type == "payment_confirm" {
             NotificationCenter.default.post(name: Notification.Name("payment_confirm"), object: nil)
