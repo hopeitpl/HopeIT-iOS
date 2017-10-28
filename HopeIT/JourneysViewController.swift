@@ -72,8 +72,9 @@ class JourneysViewController: UIViewController, UITableViewDelegate, UITableView
         alertVC.addAction(yesAction)
         alertVC.addAction(noAction)
         
-        present(alertVC, animated: true)
-        
+        DispatchQueue.main.async {
+            self.present(alertVC, animated: true)
+        }
     }
     
     func didTapEdit(journey: Journey) {

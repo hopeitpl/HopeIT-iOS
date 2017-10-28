@@ -31,6 +31,7 @@
 		DDDDACA11FA3FC44006C9CBA /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDDACA01FA3FC44006C9CBA /* PaymentViewModel.swift */; };
 		DDDDACA41FA3FC6B006C9CBA /* RecurringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDDACA31FA3FC6B006C9CBA /* RecurringViewController.swift */; };
 		DDDDACA61FA41434006C9CBA /* JourneyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDDACA51FA41433006C9CBA /* JourneyCell.swift */; };
+		DDDDACA91FA42D5A006C9CBA /* JourneyConfiguratorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDDACA81FA42D5A006C9CBA /* JourneyConfiguratorViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		DDDDACA01FA3FC44006C9CBA /* PaymentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
 		DDDDACA31FA3FC6B006C9CBA /* RecurringViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecurringViewController.swift; sourceTree = "<group>"; };
 		DDDDACA51FA41433006C9CBA /* JourneyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JourneyCell.swift; sourceTree = "<group>"; };
+		DDDDACA81FA42D5A006C9CBA /* JourneyConfiguratorViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JourneyConfiguratorViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,12 +144,12 @@
 		DDA41DCA1FA39255007AE81D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DDDDACA71FA42D45006C9CBA /* Creator */,
 				DDDDACA21FA3FC5D006C9CBA /* Recurring */,
 				DDDDAC9F1FA3FC32006C9CBA /* Payment */,
 				DDDDAC961FA3CE29006C9CBA /* Home */,
 				DDA41DD81FA39ACA007AE81D /* Journeys */,
 				DDA41DC81FA3924F007AE81D /* TutorialViewController.swift */,
-				DDA41DCD1FA3929E007AE81D /* JourneyConfiguratorViewController.swift */,
 				DDA41DB31FA3764B007AE81D /* ViewController.swift */,
 				DDDDAC9D1FA3D3FD006C9CBA /* CustomTabBarController.swift */,
 			);
@@ -206,6 +208,15 @@
 				DDDDACA31FA3FC6B006C9CBA /* RecurringViewController.swift */,
 			);
 			name = Recurring;
+			sourceTree = "<group>";
+		};
+		DDDDACA71FA42D45006C9CBA /* Creator */ = {
+			isa = PBXGroup;
+			children = (
+				DDA41DCD1FA3929E007AE81D /* JourneyConfiguratorViewController.swift */,
+				DDDDACA81FA42D5A006C9CBA /* JourneyConfiguratorViewModel.swift */,
+			);
+			name = Creator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,6 +365,7 @@
 				DDDDAC9E1FA3D3FD006C9CBA /* CustomTabBarController.swift in Sources */,
 				DDDDAC9C1FA3D2D3006C9CBA /* Extensions.swift in Sources */,
 				DDDDAC9A1FA3CE6F006C9CBA /* User.swift in Sources */,
+				DDDDACA91FA42D5A006C9CBA /* JourneyConfiguratorViewModel.swift in Sources */,
 				DDA41DD21FA39316007AE81D /* HomeViewController.swift in Sources */,
 				DDDDAC951FA3C8D6006C9CBA /* Utilities.swift in Sources */,
 				DDA41DB21FA3764B007AE81D /* AppDelegate.swift in Sources */,
