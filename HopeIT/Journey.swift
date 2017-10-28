@@ -6,7 +6,7 @@
 //  Copyright © 2017 bydlaki. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 enum NotificationInterval {
     case month
@@ -20,5 +20,7 @@ struct Journey {
     let installments: Int
     let value: Int
     let notificationInterval: NotificationInterval
+    let imageName: String
+    let tintColor: UIColor
 
 }

@@ -11,16 +11,10 @@ import Alamofire
 
 struct HomeViewModel {
     
-    private let user: User
-    
     let progress = Variable<Double>(0.0)
     let target = Variable<Int?>(nil)
     let balance = Variable<Int>(0)
     let errorString = Variable<String>("")
-    
-    init(user: User) {
-        self.user = user
-    }
     
     func fetchHomeScreen() {
         guard let url = URL(string: "") else {

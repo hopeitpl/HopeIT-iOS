@@ -20,17 +20,23 @@ struct JourneysViewModel {
         let mars = Journey(name: "Misja na Marsa",
                            desc: "100 złotych w 3 miesiące", installments: 3,
                            value: 100,
-                           notificationInterval: .week)
+                           notificationInterval: .week,
+                           imageName: "mars",
+                           tintColor: UIColor.marsOrange())
         
-        let saturn = Journey(name: "Pierścienie Saturna",
+        let saturn = Journey(name: "Pierscienie Saturna",
                               desc: "500 złotych w poł roku", installments: 6,
                               value: 500,
-                              notificationInterval: .month)
+                              notificationInterval: .month,
+                              imageName: "saturn",
+                              tintColor: UIColor.saturn())
         
         let stars = Journey(name: "Dzienniki gwiazdowe",
                              desc: "1500 złotych w rok", installments: 12,
                              value: 1500,
-                             notificationInterval: .month)
+                             notificationInterval: .month,
+                             imageName: "gwiazdy",
+                             tintColor: UIColor.defaultBlue())
         return [mars, saturn, stars]
     }
 }

@@ -28,6 +28,9 @@
 		DDDDAC9A1FA3CE6F006C9CBA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDDAC991FA3CE6F006C9CBA /* User.swift */; };
 		DDDDAC9C1FA3D2D3006C9CBA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDDAC9B1FA3D2D3006C9CBA /* Extensions.swift */; };
 		DDDDAC9E1FA3D3FD006C9CBA /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDDAC9D1FA3D3FD006C9CBA /* CustomTabBarController.swift */; };
+		DDDDACA11FA3FC44006C9CBA /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDDACA01FA3FC44006C9CBA /* PaymentViewModel.swift */; };
+		DDDDACA41FA3FC6B006C9CBA /* RecurringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDDACA31FA3FC6B006C9CBA /* RecurringViewController.swift */; };
+		DDDDACA61FA41434006C9CBA /* JourneyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDDACA51FA41433006C9CBA /* JourneyCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +60,9 @@
 		DDDDAC991FA3CE6F006C9CBA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DDDDAC9B1FA3D2D3006C9CBA /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		DDDDAC9D1FA3D3FD006C9CBA /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		DDDDACA01FA3FC44006C9CBA /* PaymentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
+		DDDDACA31FA3FC6B006C9CBA /* RecurringViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecurringViewController.swift; sourceTree = "<group>"; };
+		DDDDACA51FA41433006C9CBA /* JourneyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JourneyCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,11 +142,12 @@
 		DDA41DCA1FA39255007AE81D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DDDDACA21FA3FC5D006C9CBA /* Recurring */,
+				DDDDAC9F1FA3FC32006C9CBA /* Payment */,
 				DDDDAC961FA3CE29006C9CBA /* Home */,
 				DDA41DD81FA39ACA007AE81D /* Journeys */,
 				DDA41DC81FA3924F007AE81D /* TutorialViewController.swift */,
 				DDA41DCD1FA3929E007AE81D /* JourneyConfiguratorViewController.swift */,
-				DDA41DCF1FA392B5007AE81D /* PaymentViewController.swift */,
 				DDA41DB31FA3764B007AE81D /* ViewController.swift */,
 				DDDDAC9D1FA3D3FD006C9CBA /* CustomTabBarController.swift */,
 			);
@@ -161,6 +168,7 @@
 			children = (
 				DDA41DCB1FA3926E007AE81D /* JourneysViewController.swift */,
 				DDA41DD91FA39ADE007AE81D /* JourneysViewModel.swift */,
+				DDDDACA51FA41433006C9CBA /* JourneyCell.swift */,
 			);
 			name = Journeys;
 			sourceTree = "<group>";
@@ -181,6 +189,23 @@
 				DDDDAC971FA3CE3D006C9CBA /* HomeViewModel.swift */,
 			);
 			name = Home;
+			sourceTree = "<group>";
+		};
+		DDDDAC9F1FA3FC32006C9CBA /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				DDA41DCF1FA392B5007AE81D /* PaymentViewController.swift */,
+				DDDDACA01FA3FC44006C9CBA /* PaymentViewModel.swift */,
+			);
+			name = Payment;
+			sourceTree = "<group>";
+		};
+		DDDDACA21FA3FC5D006C9CBA /* Recurring */ = {
+			isa = PBXGroup;
+			children = (
+				DDDDACA31FA3FC6B006C9CBA /* RecurringViewController.swift */,
+			);
+			name = Recurring;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,12 +341,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDA41DB41FA3764B007AE81D /* ViewController.swift in Sources */,
+				DDDDACA11FA3FC44006C9CBA /* PaymentViewModel.swift in Sources */,
+				DDDDACA61FA41434006C9CBA /* JourneyCell.swift in Sources */,
 				DDDDAC981FA3CE3D006C9CBA /* HomeViewModel.swift in Sources */,
 				DDA41DD01FA392B6007AE81D /* PaymentViewController.swift in Sources */,
 				DDA41DDA1FA39ADE007AE81D /* JourneysViewModel.swift in Sources */,
 				DDA41DCE1FA3929E007AE81D /* JourneyConfiguratorViewController.swift in Sources */,
 				DDA41DCC1FA3926E007AE81D /* JourneysViewController.swift in Sources */,
 				DDA41DD71FA39925007AE81D /* Journey.swift in Sources */,
+				DDDDACA41FA3FC6B006C9CBA /* RecurringViewController.swift in Sources */,
 				DDA41DC91FA3924F007AE81D /* TutorialViewController.swift in Sources */,
 				DDDDAC9E1FA3D3FD006C9CBA /* CustomTabBarController.swift in Sources */,
 				DDDDAC9C1FA3D2D3006C9CBA /* Extensions.swift in Sources */,

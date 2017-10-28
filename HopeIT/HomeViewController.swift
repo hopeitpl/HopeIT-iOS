@@ -8,6 +8,7 @@
 
 import UIKit
 import RxGesture
+import RxSwift
 
 class HomeViewController: UIViewController {
     
@@ -15,6 +16,13 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var saturn: UIImageView!
     @IBOutlet weak var earth: UIImageView!
     @IBOutlet weak var overlayView: UIView!
+    @IBOutlet weak var recurringButton: UIButton!
+    @IBOutlet weak var paymentButton: UIButton!
+    @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet weak var addPaymentView: UIView!
+    
+    private let homeViewModel = HomeViewModel()
+    private let disposeBag = DisposeBag()
     
     private enum Constants {
         static let earthAnimKey = "earthAnim"
@@ -24,6 +32,9 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setReactiveBinding()
+        setUI()
         applyGradientLayer()
     }
     
@@ -31,15 +42,63 @@ class HomeViewController: UIViewController {
         super.viewWillAppear(animated)
         
         initAnimations()
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        saturn.layer.removeAllAnimations()
+        homeViewModel.fetchHomeScreen()
     }
 
+    private func setReactiveBinding() {
+        closeButton.rx.tap
+            .bind { [unowned self] in self.hideOverlay() }
+            .addDisposableTo(disposeBag)
+        
+        recurringButton.rx.tap
+            .bind { [unowned self] in self.recurringAction() }
+            .addDisposableTo(disposeBag)
+        
+        paymentButton.rx.tap
+            .bind { [unowned self] in self.paymentAction() }
+            .addDisposableTo(disposeBag)
+
+        addPaymentView.rx.tapGesture().when(.recognized).subscribe(onNext: { [unowned self] _ in
+            self.showOverlay()
+        }).disposed(by: disposeBag)
+    }
+    
+    // MARK: Actions
+    
+    private func recurringAction() {
+        (tabBarController as? CustomTabBarController)?.presentRecurring()
+    }
+    
+    private func paymentAction() {
+        (tabBarController as? CustomTabBarController)?.presentPayment()
+    }
+    
     // MARK: UI Customization
+    
+    private func hideOverlay() {
+        UIView.animate(withDuration: 0.1, animations: { [unowned self] in
+            self.overlayView.alpha = 0.0
+        }, completion: { [unowned self] _ in
+            self.overlayView.isUserInteractionEnabled = false
+        })
+    }
+    
+    private func showOverlay() {
+        view.bringSubview(toFront: overlayView)
+        UIView.animate(withDuration: 0.1, animations: { [unowned self] in
+            self.overlayView.alpha = 1.0
+            }, completion: { [unowned self] _ in
+                self.overlayView.isUserInteractionEnabled = true
+        })
+    }
+    
+    private func setUI() {
+        addPaymentView.layer.cornerRadius = 30.0
+        addPaymentView.clipsToBounds = true
+        addPaymentView.dropShadow()
+        paymentButton.setTitleColor(UIColor.defaultPink(), for: .normal)
+        recurringButton.setTitleColor(UIColor.defaultPink(), for: .normal)
+    }
     
     private func initAnimations() {
         scale(view: logo, with: Constants.logoAnimKey, duration: 0.5)
@@ -64,7 +123,7 @@ class HomeViewController: UIViewController {
             let movementAnimation = CABasicAnimation(keyPath: "position")
             
             movementAnimation.fromValue = NSValue(cgPoint: CGPoint(x: view.center.x, y: view.center.y))
-            movementAnimation.toValue = NSValue(cgPoint: CGPoint(x: view.center.x + value, y: view.center.y))
+            movementAnimation.toValue = NSValue(cgPoint: CGPoint(x: view.center.x - value, y: view.center.y))
             movementAnimation.duration = duration
             movementAnimation.repeatCount = Float.infinity
             movementAnimation.autoreverses = true

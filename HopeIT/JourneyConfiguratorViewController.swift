@@ -6,4 +6,11 @@
 //  Copyright © 2017 bydlaki. All rights reserved.
 //
 
-import Foundation
+import UIKit
+import RxSwift
+
+class JourneyConfiguratorViewController: UIViewController {
+    
+    let journey = Variable<Journey?>(nil)
+    
+}

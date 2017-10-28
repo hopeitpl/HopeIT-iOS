@@ -8,6 +8,20 @@
 
 import UIKit
 
+extension UIView {
+    
+    func dropShadow() {
+        
+        self.layer.masksToBounds =  false
+        self.layer.shadowOpacity = 0.4
+        self.layer.shadowRadius = 2
+        self.layer.cornerRadius = 4
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOffset = CGSize(width: 0, height: 1)
+        
+    }
+}
+
 extension UIColor {
     convenience init(hex: String) {
         let scanner = Scanner(string: hex)
@@ -43,4 +57,13 @@ extension UIColor {
     static func defaultGrey() -> UIColor {
         return UIColor(hex: "ecf0f5")
     }
+    
+    static func marsOrange() -> UIColor {
+        return UIColor(hex: "F17411")
+    }
+    
+    static func saturn() -> UIColor {
+        return UIColor(hex: "FFEA7C")
+    }
+
 }
