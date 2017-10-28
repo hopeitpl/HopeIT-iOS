@@ -6,4 +6,18 @@
 //  Copyright © 2017 bydlaki. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class TutorialViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(close))
+        view.addGestureRecognizer(recognizer)
+    }
+    
+    @objc private func close() {
+        dismiss(animated: true)
+    }
+    
+}

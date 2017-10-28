@@ -132,9 +132,9 @@
                                                                     </subviews>
                                                                 </stackView>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fdj-Po-3g5">
-                                                                    <rect key="frame" x="39" y="221" width="182" height="61"/>
+                                                                    <rect key="frame" x="0.5" y="221" width="259" height="61"/>
                                                                     <fontDescription key="fontDescription" name="DKCrayonCrumble" family="DK Crayon Crumble" pointSize="50"/>
-                                                                    <state key="normal" title="Ekspedycja">
+                                                                    <state key="normal" title="Cel: Ekspedycja">
                                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </state>
                                                                 </button>
@@ -448,7 +448,7 @@ odliczanie!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kyq-BO-AzR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="375" y="-740.49295774647885"/>
+            <point key="canvasLocation" x="-103" y="-693"/>
         </scene>
         <!--Statystyki-->
         <scene sceneID="ms0-7R-dWF">
@@ -559,6 +559,73 @@ wspomogłeś Fundację</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h7O-Qz-7TF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4128.75" y="132.04225352112675"/>
+        </scene>
+        <!--Tutorial View Controller-->
+        <scene sceneID="Uvl-RW-TFs">
+            <objects>
+                <viewController id="nzf-TU-jfg" customClass="TutorialViewController" customModule="HopeIT" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g3z-mr-qVX"/>
+                        <viewControllerLayoutGuide type="bottom" id="I4y-xM-lbn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mnb-4h-AFS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hig-uT-af0">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_naratunek" translatesAutoresizingMaskIntoConstraints="NO" id="2Gh-I5-mwj">
+                                <rect key="frame" x="40" y="40" width="240" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="rYf-IC-r7w"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qi1-Lz-6wW">
+                                <rect key="frame" x="32" y="96" width="256" height="323"/>
+                                <string key="text">Drogi Użytkowniku!
+
+Dziecięce głowy pełne są marzeń o eksploracji kosmosu. Niestety, niektórym z nich przyjdzie najpierw stawić czoła straszliwym przeciwnikom małych, kosmicznych wędrowców - chorobom nowotworowym. 
+
+Czy TY możesz wesprzeć ich w walce z nimi? 
+
+Razem z fundacją Na Ratunek pomóż wyposażyć oddziały onkologii i hematologii dziecięcej i przyczyń się do sukcesu misji małych Astronautów!
+ </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.031372549020000001" green="0.30588235289999999" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="1000" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08i-ES-xy0">
+                                <rect key="frame" x="41.5" y="427" width="142.5" height="41"/>
+                                <string key="text">Ten przycisk 
+pomoże Ci zacząć</string>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" red="0.87843137250000003" green="0.019607843140000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="2Gh-I5-mwj" secondAttribute="trailing" constant="40" id="9Wa-DQ-8dt"/>
+                            <constraint firstAttribute="trailing" secondItem="hig-uT-af0" secondAttribute="trailing" id="HPu-PC-GL0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qi1-Lz-6wW" secondAttribute="trailing" constant="16" id="IW9-2W-4kg"/>
+                            <constraint firstItem="qi1-Lz-6wW" firstAttribute="top" secondItem="2Gh-I5-mwj" secondAttribute="bottom" constant="15" id="J1n-xf-MHV"/>
+                            <constraint firstItem="I4y-xM-lbn" firstAttribute="top" secondItem="08i-ES-xy0" secondAttribute="bottom" constant="100" id="Jqf-uW-3ic"/>
+                            <constraint firstItem="08i-ES-xy0" firstAttribute="top" relation="greaterThanOrEqual" secondItem="qi1-Lz-6wW" secondAttribute="bottom" constant="8" id="OJN-tK-A5u"/>
+                            <constraint firstItem="qi1-Lz-6wW" firstAttribute="leading" secondItem="mnb-4h-AFS" secondAttribute="leadingMargin" constant="16" id="Ys1-xK-zac"/>
+                            <constraint firstItem="I4y-xM-lbn" firstAttribute="top" secondItem="hig-uT-af0" secondAttribute="bottom" id="bRf-K6-VRg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="08i-ES-xy0" secondAttribute="trailing" constant="120" id="esE-ui-hGX"/>
+                            <constraint firstItem="2Gh-I5-mwj" firstAttribute="leading" secondItem="mnb-4h-AFS" secondAttribute="leading" constant="40" id="h4w-Iv-sDe"/>
+                            <constraint firstItem="2Gh-I5-mwj" firstAttribute="top" secondItem="g3z-mr-qVX" secondAttribute="bottom" constant="20" id="hHO-hc-GVL"/>
+                            <constraint firstItem="hig-uT-af0" firstAttribute="top" secondItem="mnb-4h-AFS" secondAttribute="top" id="uWb-F9-pLd"/>
+                            <constraint firstItem="hig-uT-af0" firstAttribute="leading" secondItem="mnb-4h-AFS" secondAttribute="leading" id="y79-Jn-ljK"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fWb-LZ-FiC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1008.75" y="-636.97183098591552"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="I9b-lX-uJq">
@@ -964,7 +1031,7 @@ wspomogłeś Fundację</string>
         <!--Custom Tab Bar Controller-->
         <scene sceneID="in7-LK-fUD">
             <objects>
-                <tabBarController id="Olh-fX-jur" customClass="CustomTabBarController" customModule="HopeIT" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController providesPresentationContextTransitionStyle="YES" id="Olh-fX-jur" customClass="CustomTabBarController" customModule="HopeIT" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="IDX-JO-k2e">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -979,6 +1046,7 @@ wspomogłeś Fundację</string>
                         <segue destination="lIY-fq-VSj" kind="relationship" relationship="viewControllers" id="suk-ES-XFh"/>
                         <segue destination="ark-8n-SUU" kind="presentation" identifier="payment" modalPresentationStyle="overFullScreen" id="se2-xY-6Ui"/>
                         <segue destination="qoK-Cv-A6k" kind="presentation" identifier="recurring" id="Dbg-9H-PiU"/>
+                        <segue destination="nzf-TU-jfg" kind="presentation" identifier="tutorial" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="VGF-4T-liq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pft-HA-kIv" userLabel="First Responder" sceneMemberID="firstResponder"/>

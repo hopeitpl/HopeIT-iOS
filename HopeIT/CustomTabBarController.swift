@@ -54,6 +54,12 @@ class CustomTabBarController: UITabBarController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        if UserDefaults.standard.bool(forKey: "tutorialSeen") != true {
+            performSegue(withIdentifier: "tutorial", sender: nil)
+            UserDefaults.standard.set(true, forKey: "tutorialSeen")
+            return
+        }
+        
         if let amount = appDelegate.paymentAmount {
             presentPayment(amount: amount)
             appDelegate.paymentAmount = nil
