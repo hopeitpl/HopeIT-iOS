@@ -8,6 +8,7 @@ target 'HopeIT' do
   pod 'Alamofire', '~> 4.5'
   pod 'DottedProgressBar'
   pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
   pod 'BRYXBanner', '~> 0.7.1'
   pod 'RxSwift', :git => 'https://github.com/ReactiveX/RxSwift.git', :branch => 'rxswift-3.0'
   pod 'RxCocoa', :git => 'https://github.com/ReactiveX/RxSwift.git', :branch => 'rxswift-3.0'

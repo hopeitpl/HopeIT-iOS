@@ -15,6 +15,7 @@ class PaymentViewController: UIViewController {
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var amountField: UITextField!
     
+    private let viewModel = PaymentViewModel()
     private let disposeBag = DisposeBag()
     
     let amount = Variable(10)
@@ -24,6 +25,18 @@ class PaymentViewController: UIViewController {
         
         setReactiveBindings()
         
+        let numberToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 50))
+        numberToolbar.barStyle = UIBarStyle.default
+        numberToolbar.items = [
+            UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil),
+            UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.plain, target: self, action: #selector(closeKeyboard))]
+        numberToolbar.sizeToFit()
+        amountField.inputAccessoryView = numberToolbar
+        
+    }
+    
+    @objc private func closeKeyboard() {
+        view.endEditing(true)
     }
     
     private func setReactiveBindings() {
@@ -59,10 +72,17 @@ class PaymentViewController: UIViewController {
                 }
             )
             .addDisposableTo(disposeBag)
+        
+        viewModel.url.asObservable().subscribe(onNext: {
+            guard let urlString = $0, let url = URL(string: urlString) else {
+                return
+            }
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }).addDisposableTo(disposeBag)
     }
     
     private func proceed() {
-        
+        viewModel.post(amount: Int(amountField.text!)!)
     }
 }
 

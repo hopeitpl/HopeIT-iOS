@@ -8,6 +8,8 @@
 
 import UIKit
 import RxSwift
+import Alamofire
+import PKHUD
 
 class JourneyConfiguratorViewController: UIViewController {
     
@@ -29,7 +31,6 @@ class JourneyConfiguratorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setReactiveBindings()
     }
     
@@ -58,11 +59,25 @@ class JourneyConfiguratorViewController: UIViewController {
         
         submitButton.rx.tap
             .bind { [unowned self] in
-                print(self.viewModel.duration.value)
-                print(self.viewModel.value.value)
-                print(self.intervalSwitch.isOn ? "\(NotificationInterval.month)" : "\(NotificationInterval.week)")
+                self.post()
             }
             .addDisposableTo(disposeBag)
+    }
+    
+    private func post() {
+        let url = "http://10.99.130.92:8000/users/1/goal/"
+        let params: Parameters = ["user_id": 1, "target": self.viewModel.value.value, "months": self.viewModel.duration.value, "notify_freq": self.intervalSwitch.isOn ? 7 : 30]
+        Alamofire.request(url, method: .post, parameters: params,
+            encoding: JSONEncoding.default).responseJSON { response in
+            print(response)
+            if response.result.isSuccess, Utilities.isStatusValid(code: response.response?.statusCode) {
+                self.navigationController?.dismiss(animated: true, completion: {
+                    HUD.flash(.success, delay: 1.0)
+                })
+            } else {
+                HUD.flash(.error, delay: 1.0)
+            }
+        }
     }
     
 }

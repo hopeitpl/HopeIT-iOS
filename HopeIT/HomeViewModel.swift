@@ -11,17 +11,21 @@ import Alamofire
 
 struct HomeViewModel {
     
-    let progress = Variable<Double>(0.0)
     let target = Variable<Int?>(nil)
-    let balance = Variable<Int>(0)
-    let errorString = Variable<String>("")
+    let balance = Variable<Int?>(nil)
     
     func fetchHomeScreen() {
-        guard let url = URL(string: "") else {
-            return
-        }
+        let url = "http://10.99.130.92:8000/users/1/goal"
         Alamofire.request(url).responseJSON { response in
-            
+            print(response)
+            if response.result.isSuccess, Utilities.isStatusValid(code: response.response?.statusCode) {
+                if let JSON = response.result.value as? [String: AnyObject] {
+                    if let target = JSON["target"] as? Int, let balance = JSON["balance"] as? Int {
+                        self.target.value = target
+                        self.balance.value = balance
+                    }
+                }
+            }
         }
     }
     

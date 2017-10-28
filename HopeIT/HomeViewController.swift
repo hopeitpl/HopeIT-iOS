@@ -12,6 +12,11 @@ import RxSwift
 
 class HomeViewController: UIViewController {
     
+    @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet weak var topLabel: UILabel!
+    @IBOutlet weak var balanceLabel: UILabel!
+    @IBOutlet weak var widgetView: UIView!
+    
     @IBOutlet weak var logo: UIImageView!
     @IBOutlet weak var saturn: UIImageView!
     @IBOutlet weak var earth: UIImageView!
@@ -36,6 +41,11 @@ class HomeViewController: UIViewController {
         setReactiveBinding()
         setUI()
         applyGradientLayer()
+        NotificationCenter.default.addObserver(self, selector: #selector(refresh), name: Notification.Name("payment_confirm"), object: nil)
+    }
+    
+    @objc private func refresh() {
+        homeViewModel.fetchHomeScreen()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,7 +70,33 @@ class HomeViewController: UIViewController {
 
         addPaymentView.rx.tapGesture().when(.recognized).subscribe(onNext: { [unowned self] _ in
             self.showOverlay()
-        }).disposed(by: disposeBag)
+        }).addDisposableTo(disposeBag)
+        
+        homeViewModel.balance.asObservable().subscribe(onNext: { [unowned self] in
+            guard let balance = $0 else {
+                return
+            }
+            self.balanceLabel.text = "\(balance) PLN"
+            self.progressBar.setProgress(Float(balance), animated: true)
+        }).addDisposableTo(disposeBag)
+        
+        homeViewModel.target.asObservable().subscribe(onNext: { [unowned self] in
+            guard let target = $0 else {
+                return
+            }
+            self.topLabel.text = "\(target)"
+        }).addDisposableTo(disposeBag)
+        
+        Observable.combineLatest(homeViewModel.balance.asObservable(), homeViewModel.target.asObservable())
+            .map {
+                if $0 != nil && $1 != nil {
+                    return false
+                }
+                return true
+            }
+            .bind(to: widgetView.rx.isHidden)
+            .addDisposableTo(disposeBag)
+    
     }
     
     // MARK: Actions
@@ -93,6 +129,9 @@ class HomeViewController: UIViewController {
     }
     
     private func setUI() {
+        widgetView.layer.cornerRadius = 20.0
+        widgetView.clipsToBounds = true
+        widgetView.dropShadow()
         addPaymentView.layer.cornerRadius = 30.0
         addPaymentView.clipsToBounds = true
         addPaymentView.dropShadow()

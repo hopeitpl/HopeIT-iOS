@@ -15,10 +15,36 @@ class CustomTabBarController: UITabBarController {
         static let segueRecurring = "recurring"
     }
     
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        selectedIndex = 2
+        if appDelegate.openMessages {
+            selectedIndex = 0
+        } else {
+            selectedIndex = 2
+        }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(actOnMessagesPush), name: Notification.Name("message"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(actOnPaymentPush(amount:)), name: Notification.Name("payment"), object: nil)
+    }
+    
+    @objc private func actOnPaymentPush(amount: Int) {
+        presentPayment(amount: amount)
+    }
+    
+    @objc private func actOnMessagesPush() {
+        tabBar.items![0].badgeValue = "!"
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if let amount = appDelegate.paymentAmount {
+            presentPayment(amount: amount)
+            appDelegate.paymentAmount = nil
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -30,15 +56,12 @@ class CustomTabBarController: UITabBarController {
         case Constants.seguePayment:
             let vc = segue.destination as! PaymentViewController
             vc.amount.value = sender as! Int
-//        case Constants.segueRecurring:
-//            let vc = (segue.destination as! UINavigationController).viewControllers.first as! JourneysViewController
-//            vc.journey = sender as? Journey
         default:
             break
         }
     }
     
-    func presentPayment(amount: Int = 10) {
+    func presentPayment(amount: Int = 5) {
         performSegue(withIdentifier: Constants.seguePayment, sender: amount)
     }
     

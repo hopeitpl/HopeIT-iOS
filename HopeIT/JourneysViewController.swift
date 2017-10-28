@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import PKHUD
 
 class JourneysViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, JourneyCellDelegate {
     
@@ -59,12 +61,12 @@ class JourneysViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let goal = journeysViewModel.journeys.value[indexPath.row].desc
+        let journey = journeysViewModel.journeys.value[indexPath.row]
         
-        let alertVC = UIAlertController(title: "Rozpoczynasz wyprawę", message: "Twoim celem jest wpłacenie \(goal) na cel Fundacji. Startujemy?", preferredStyle: .actionSheet)
+        let alertVC = UIAlertController(title: "Rozpoczynasz wyprawę", message: "Twoim celem jest wpłacenie \(journey.desc) na cel Fundacji. Startujemy?", preferredStyle: .actionSheet)
         
         let yesAction = UIAlertAction(title: "Zapłon!", style: .default) { _ in
-            self.dismiss(animated: true)
+            self.post(journey: journey)
         }
         
         let noAction = UIAlertAction(title: "Jednak nie", style: .destructive, handler: nil)
@@ -81,5 +83,20 @@ class JourneysViewController: UIViewController, UITableViewDelegate, UITableView
         configure(journey: journey)
     }
     
+    private func post(journey: Journey) {
+        let url = "http://\(URLs.apiPrefix)/users/1/goal/"
+        let params: Parameters = ["user_id": 1, "target": journey.value, "months": journey.installments, "notify_freq": journey.notificationInterval == .week ? 7 : 30]
+        Alamofire.request(url, method: .post, parameters: params,
+                          encoding: JSONEncoding.default).responseJSON { response in
+                            print(response)
+                            if response.result.isSuccess, Utilities.isStatusValid(code: response.response?.statusCode) {
+                                self.navigationController?.dismiss(animated: true, completion: {
+                                    HUD.flash(.success, delay: 1.0)
+                                })
+                            } else {
+                                HUD.flash(.error, delay: 1.0)
+                            }
+        }
+    }
     
 }

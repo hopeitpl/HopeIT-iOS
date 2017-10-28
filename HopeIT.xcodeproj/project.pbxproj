@@ -32,6 +32,12 @@
 		DDDDACA41FA3FC6B006C9CBA /* RecurringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDDACA31FA3FC6B006C9CBA /* RecurringViewController.swift */; };
 		DDDDACA61FA41434006C9CBA /* JourneyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDDACA51FA41433006C9CBA /* JourneyCell.swift */; };
 		DDDDACA91FA42D5A006C9CBA /* JourneyConfiguratorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDDACA81FA42D5A006C9CBA /* JourneyConfiguratorViewModel.swift */; };
+		DDDDACAC1FA44696006C9CBA /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDDACAB1FA44696006C9CBA /* HistoryViewController.swift */; };
+		DDDDACAF1FA44986006C9CBA /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDDACAE1FA44986006C9CBA /* MessagesViewController.swift */; };
+		DDDDACB11FA44A18006C9CBA /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDDACB01FA44A18006C9CBA /* Message.swift */; };
+		DDDDACB31FA44C46006C9CBA /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDDACB21FA44C46006C9CBA /* MessageViewController.swift */; };
+		DDDDACB51FA46CFB006C9CBA /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDDACB41FA46CFB006C9CBA /* Payment.swift */; };
+		DDDDACB71FA47B61006C9CBA /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDDACB61FA47B61006C9CBA /* URLs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +71,12 @@
 		DDDDACA31FA3FC6B006C9CBA /* RecurringViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecurringViewController.swift; sourceTree = "<group>"; };
 		DDDDACA51FA41433006C9CBA /* JourneyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JourneyCell.swift; sourceTree = "<group>"; };
 		DDDDACA81FA42D5A006C9CBA /* JourneyConfiguratorViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JourneyConfiguratorViewModel.swift; sourceTree = "<group>"; };
+		DDDDACAB1FA44696006C9CBA /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		DDDDACAE1FA44986006C9CBA /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		DDDDACB01FA44A18006C9CBA /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		DDDDACB21FA44C46006C9CBA /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		DDDDACB41FA46CFB006C9CBA /* Payment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
+		DDDDACB61FA47B61006C9CBA /* URLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +156,8 @@
 		DDA41DCA1FA39255007AE81D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DDDDACAD1FA44958006C9CBA /* Messages */,
+				DDDDACAA1FA4467E006C9CBA /* History */,
 				DDDDACA71FA42D45006C9CBA /* Creator */,
 				DDDDACA21FA3FC5D006C9CBA /* Recurring */,
 				DDDDAC9F1FA3FC32006C9CBA /* Payment */,
@@ -161,6 +175,8 @@
 			children = (
 				DDA41DD61FA39925007AE81D /* Journey.swift */,
 				DDDDAC991FA3CE6F006C9CBA /* User.swift */,
+				DDDDACB01FA44A18006C9CBA /* Message.swift */,
+				DDDDACB41FA46CFB006C9CBA /* Payment.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -180,6 +196,7 @@
 			children = (
 				DDDDAC941FA3C8D6006C9CBA /* Utilities.swift */,
 				DDDDAC9B1FA3D2D3006C9CBA /* Extensions.swift */,
+				DDDDACB61FA47B61006C9CBA /* URLs.swift */,
 			);
 			name = Others;
 			sourceTree = "<group>";
@@ -217,6 +234,23 @@
 				DDDDACA81FA42D5A006C9CBA /* JourneyConfiguratorViewModel.swift */,
 			);
 			name = Creator;
+			sourceTree = "<group>";
+		};
+		DDDDACAA1FA4467E006C9CBA /* History */ = {
+			isa = PBXGroup;
+			children = (
+				DDDDACAB1FA44696006C9CBA /* HistoryViewController.swift */,
+			);
+			name = History;
+			sourceTree = "<group>";
+		};
+		DDDDACAD1FA44958006C9CBA /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				DDDDACAE1FA44986006C9CBA /* MessagesViewController.swift */,
+				DDDDACB21FA44C46006C9CBA /* MessageViewController.swift */,
+			);
+			name = Messages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,16 +391,22 @@
 				DDDDAC981FA3CE3D006C9CBA /* HomeViewModel.swift in Sources */,
 				DDA41DD01FA392B6007AE81D /* PaymentViewController.swift in Sources */,
 				DDA41DDA1FA39ADE007AE81D /* JourneysViewModel.swift in Sources */,
+				DDDDACB11FA44A18006C9CBA /* Message.swift in Sources */,
+				DDDDACB51FA46CFB006C9CBA /* Payment.swift in Sources */,
 				DDA41DCE1FA3929E007AE81D /* JourneyConfiguratorViewController.swift in Sources */,
 				DDA41DCC1FA3926E007AE81D /* JourneysViewController.swift in Sources */,
 				DDA41DD71FA39925007AE81D /* Journey.swift in Sources */,
 				DDDDACA41FA3FC6B006C9CBA /* RecurringViewController.swift in Sources */,
+				DDDDACAF1FA44986006C9CBA /* MessagesViewController.swift in Sources */,
 				DDA41DC91FA3924F007AE81D /* TutorialViewController.swift in Sources */,
 				DDDDAC9E1FA3D3FD006C9CBA /* CustomTabBarController.swift in Sources */,
 				DDDDAC9C1FA3D2D3006C9CBA /* Extensions.swift in Sources */,
 				DDDDAC9A1FA3CE6F006C9CBA /* User.swift in Sources */,
 				DDDDACA91FA42D5A006C9CBA /* JourneyConfiguratorViewModel.swift in Sources */,
 				DDA41DD21FA39316007AE81D /* HomeViewController.swift in Sources */,
+				DDDDACB71FA47B61006C9CBA /* URLs.swift in Sources */,
+				DDDDACB31FA44C46006C9CBA /* MessageViewController.swift in Sources */,
+				DDDDACAC1FA44696006C9CBA /* HistoryViewController.swift in Sources */,
 				DDDDAC951FA3C8D6006C9CBA /* Utilities.swift in Sources */,
 				DDA41DB21FA3764B007AE81D /* AppDelegate.swift in Sources */,
 			);

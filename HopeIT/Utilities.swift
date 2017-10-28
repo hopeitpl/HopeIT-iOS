@@ -16,4 +16,14 @@ class Utilities {
         }
     }
     
+    static func isStatusValid(code: Int?) -> Bool {
+        if let code = code {
+            if !(code >= 200 && code < 300) {
+                print("ERROR CODE \(code)")
+            }
+            return code >= 200 && code < 300
+        }
+        return false
+    }
+    
 }

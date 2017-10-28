@@ -7,11 +7,17 @@
 //
 
 import UIKit
+import UserNotifications
+import Firebase
+import FirebaseInstanceID
+import FirebaseMessaging
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate, MessagingDelegate {
 
     var window: UIWindow?
+    var paymentAmount: Int?
+    var openMessages = false
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -24,7 +30,67 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().isTranslucent = true
         UINavigationBar.appearance().tintColor = UIColor.white
 
+        
+        UNUserNotificationCenter.current().delegate = self
+        let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+        UNUserNotificationCenter.current().requestAuthorization(
+            options: authOptions,
+            completionHandler: {_, _ in })
+        // For iOS 10 data message (sent via FCM
+        Messaging.messaging().delegate = self
+        
+        application.registerForRemoteNotifications()
+        FirebaseApp.configure()
+        print(launchOptions?[UIApplicationLaunchOptionsKey.remoteNotification])
+        if (launchOptions != nil), let remoteNotification = launchOptions?[UIApplicationLaunchOptionsKey.remoteNotification] as? [AnyHashable : Any] {
+            if let type = remoteNotification["type"] as? String {
+                openMessages = true
+            }
+        }
+        
         return true
+    }
+    
+    func messaging(_ messaging: Messaging, didReceive remoteMessage: MessagingRemoteMessage) {
+        // Convert to pretty-print JSON, just to show the message for testing
+        guard let data =
+            try? JSONSerialization.data(withJSONObject: remoteMessage.appData, options: .prettyPrinted),
+            let prettyPrinted = String(data: data, encoding: .utf8) else {
+                return
+        }
+        print("Received direct channel message:\n\(prettyPrinted)")
+    }
+    
+    func messaging(_ messaging: Messaging, didRefreshRegistrationToken fcmToken: String) {
+        print("Firebase registration token: \(fcmToken)")
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        Messaging.messaging().apnsToken = deviceToken
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Swift.Void) {
+        let userInfo = notification.request.content.userInfo
+        let amount: Int? = userInfo["amount"] as? Int
+        action(on: userInfo["type"] as! String, amount: amount)
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Swift.Void) {
+        let userInfo = response.notification.request.content.userInfo
+        let amount: Int? = userInfo["amount"] as? Int
+        action(on: userInfo["type"] as! String, amount: amount)
+    }
+
+    func action(on type: String, amount: Int?) {
+        if type == "message" {
+            NotificationCenter.default.post(name: Notification.Name("message"), object: nil)
+        } else if type == "payment" {
+            NotificationCenter.default.post(name: Notification.Name("payment"), object: amount ?? 10)
+        } else if type == "payment_confirm" {
+            NotificationCenter.default.post(name: Notification.Name("payment_confirm"), object: nil)
+        } else {
+            NotificationCenter.default.post(name: Notification.Name("message"), object: nil)
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
