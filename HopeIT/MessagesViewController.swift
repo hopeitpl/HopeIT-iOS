@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import BRYXBanner
 
 class MessagesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -19,6 +20,8 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        applyGradientLayer()
         
         NotificationCenter.default.addObserver(self, selector: #selector(getMessages), name: Notification.Name("payment_confirm"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(getMessages), name: Notification.Name("message"), object: nil)
@@ -32,7 +35,7 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
     
     @objc private func getMessages() {
         tabBarItem.badgeValue = nil
-        let url = "http://10.99.130.92:8000/messages/user/1"
+        let url = "http://\(URLs.apiPrefix)/messages/user/1"
         Alamofire.request(url).responseJSON { response in
             print(response)
             if response.result.isSuccess, Utilities.isStatusValid(code: response.response?.statusCode) {
@@ -45,9 +48,8 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
                             img = self.convert(base64string: image)
                         }
                         let body = message["body"] as! String
-                        let id = message["id"] as! Int
                         let type = message["message_type"] as? String ?? "message"
-                        let m = Message(id: id, content: body, picture: img, date: Date(), type: type)
+                        let m = Message(content: body, picture: img, date: Date(), type: type)
                         array.append(m)
                     }
                     self.messages = array
@@ -58,8 +60,10 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     private func convert(base64string: String) -> UIImage? {
-        let decodedData = Data(base64Encoded: base64string, options: .ignoreUnknownCharacters)!
-        return UIImage(data: decodedData)
+        if let decodedData = Data(base64Encoded: base64string, options: .ignoreUnknownCharacters) {
+            return UIImage(data: decodedData)
+        }
+        return nil
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -77,15 +81,20 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let message = messages[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
-        cell.textLabel?.text = message.content
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! CustomCell
+        cell.mainLAbel.text = message.content
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"
         let dateString = dateFormatter.string(from:message.date)
-        cell.detailTextLabel?.text = dateString
-        cell.imageView?.image = message.picture
+        cell.subLAbel?.text = dateString
+        cell.picture?.image = message.picture
+        cell.selectionStyle = .none
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 74
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -94,6 +103,5 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
         performSegue(withIdentifier: "message", sender: message)
         
     }
-    
-    
+
 }

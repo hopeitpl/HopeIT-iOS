@@ -33,6 +33,7 @@ class HomeViewController: UIViewController {
         static let earthAnimKey = "earthAnim"
         static let saturnMoveKey = "saturnAnim"
         static let logoAnimKey = "logoAnim"
+        static let buttonAnimKey = "buttonAnim"
     }
     
     override func viewDidLoad() {
@@ -82,21 +83,13 @@ class HomeViewController: UIViewController {
         
         homeViewModel.target.asObservable().subscribe(onNext: { [unowned self] in
             guard let target = $0 else {
+                self.widgetView.isHidden = true
                 return
             }
             self.topLabel.text = "\(target)"
+            self.widgetView.isHidden = false
         }).addDisposableTo(disposeBag)
         
-        Observable.combineLatest(homeViewModel.balance.asObservable(), homeViewModel.target.asObservable())
-            .map {
-                if $0 != nil && $1 != nil {
-                    return false
-                }
-                return true
-            }
-            .bind(to: widgetView.rx.isHidden)
-            .addDisposableTo(disposeBag)
-    
     }
     
     // MARK: Actions
@@ -140,21 +133,10 @@ class HomeViewController: UIViewController {
     }
     
     private func initAnimations() {
+        scale(view: addPaymentView, with: Constants.buttonAnimKey, duration: 0.5)
         scale(view: logo, with: Constants.logoAnimKey, duration: 0.5)
         rotate(view: earth, with: Constants.earthAnimKey, duration: 100.0)
         move(view: saturn, for: 150, with: Constants.saturnMoveKey, duration: 15.0)
-    }
-    
-    private func applyGradientLayer() {
-        let gradient: CAGradientLayer = CAGradientLayer()
-        
-        gradient.colors = [UIColor.defaultBlue().cgColor, UIColor.lightBlue().cgColor]
-        gradient.locations = [0.0 , 1.0]
-        gradient.startPoint = CGPoint(x: 0.0, y: 0.0)
-        gradient.endPoint = CGPoint(x: 1.0, y: 1.0)
-        gradient.frame = CGRect(x: 0.0, y: 0.0, width: self.view.frame.size.width, height: self.view.frame.size.height)
-        
-        self.view.layer.insertSublayer(gradient, at: 0)
     }
     
     private func move(view: UIView, for value: CGFloat, with key: String, duration: Double = 1) {

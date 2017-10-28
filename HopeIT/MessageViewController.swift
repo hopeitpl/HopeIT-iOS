@@ -16,7 +16,7 @@ class MessageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        applyGradientLayer()
         textView.text = message.content
         imageView.image = message.picture ?? UIImage(named: "ziemia")
     }

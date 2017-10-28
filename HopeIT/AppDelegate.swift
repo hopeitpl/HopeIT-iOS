@@ -11,6 +11,7 @@ import UserNotifications
 import Firebase
 import FirebaseInstanceID
 import FirebaseMessaging
+import BRYXBanner
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate, MessagingDelegate {
@@ -82,15 +83,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
 
     func action(on type: String, amount: Int?) {
-        if type == "message" {
+        
+        var content = "Otrzymano nową wiadomość"
+        if type == "" {
+            content = "Gratuluję właśnie zrealizowałeś założony cel!"
+        } else if type == "message" {
             NotificationCenter.default.post(name: Notification.Name("message"), object: nil)
         } else if type == "payment" {
             NotificationCenter.default.post(name: Notification.Name("payment"), object: amount ?? 10)
+            content = "Czas wykonać zaplanowany przelew!"
         } else if type == "payment_confirm" {
             NotificationCenter.default.post(name: Notification.Name("payment_confirm"), object: nil)
+            content = "Twoja płatność została potwierdzona!"
         } else {
             NotificationCenter.default.post(name: Notification.Name("message"), object: nil)
         }
+        
+        let banner = Banner(title: "Kosmolog", subtitle: content, image: UIImage(named: "chlopIcon"), backgroundColor: UIColor.defaultBlue())
+        banner.dismissesOnTap = false
+        banner.show(duration: 2.0)
+        
+        banner.didTapBlock = {
+            //Redirect to feed
+            NotificationCenter.default.post(name: Notification.Name("goToMessages"), object: nil)
+        }
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

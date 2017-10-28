@@ -10,7 +10,6 @@ import UIKit
 
 struct Message {
     
-    let id: Int
     let content: String
     let picture: UIImage?
     let date: Date

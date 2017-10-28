@@ -7,5 +7,5 @@
 //
 
 enum URLs {
-    static let apiPrefix = ""
+    static let apiPrefix = "10.99.130.42:8888"
 }

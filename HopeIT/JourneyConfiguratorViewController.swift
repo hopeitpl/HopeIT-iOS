@@ -32,6 +32,8 @@ class JourneyConfiguratorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setReactiveBindings()
+        
+        applyGradientLayer()
     }
     
     
@@ -65,7 +67,7 @@ class JourneyConfiguratorViewController: UIViewController {
     }
     
     private func post() {
-        let url = "http://10.99.130.92:8000/users/1/goal/"
+        let url = "http://\(URLs.apiPrefix)/users/1/goal/"
         let params: Parameters = ["user_id": 1, "target": self.viewModel.value.value, "months": self.viewModel.duration.value, "notify_freq": self.intervalSwitch.isOn ? 7 : 30]
         Alamofire.request(url, method: .post, parameters: params,
             encoding: JSONEncoding.default).responseJSON { response in

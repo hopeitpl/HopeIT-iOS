@@ -28,6 +28,17 @@ class CustomTabBarController: UITabBarController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(actOnMessagesPush), name: Notification.Name("message"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(actOnPaymentPush(amount:)), name: Notification.Name("payment"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(goToMessages), name: Notification.Name("goToMessages"), object: nil)
+    }
+    
+    @objc private func goToMessages() {
+        if presentedViewController != nil {
+            presentedViewController?.dismiss(animated: true) {
+                self.selectedIndex = 0
+            }
+        } else {
+            selectedIndex = 0
+        }
     }
     
     @objc private func actOnPaymentPush(amount: Int) {

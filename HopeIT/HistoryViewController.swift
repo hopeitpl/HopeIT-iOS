@@ -20,6 +20,8 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.delegate = self
         tableView.dataSource = self
         
+        applyGradientLayer()
+        
         NotificationCenter.default.addObserver(self, selector: #selector(getHistory), name: Notification.Name("payment_confirm"), object: nil)
     }
     
@@ -33,20 +35,24 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         return payments.count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 74
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let payment = payments[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
-        cell.textLabel?.text = "\(payment.amount) \(payment.currency)"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! CustomCell
+        cell.mainLAbel?.text = "\(payment.amount) \(payment.currency)"
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"
         let dateString = dateFormatter.string(from:payment.date)
-        cell.detailTextLabel?.text = "\(dateString)"
+        cell.subLAbel?.text = "\(dateString)"
         cell.selectionStyle = .none
         return cell
     }
     
     @objc private func getHistory() {
-        let url = "http://10.99.130.92:8000/payments/1"
+        let url = "http://\(URLs.apiPrefix)/payments/1"
         Alamofire.request(url).responseJSON { response in
             print(response)
             if response.result.isSuccess, Utilities.isStatusValid(code: response.response?.statusCode) {

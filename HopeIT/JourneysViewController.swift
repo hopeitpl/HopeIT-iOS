@@ -20,7 +20,7 @@ class JourneysViewController: UIViewController, UITableViewDelegate, UITableView
         
         tableView.delegate = self
         tableView.dataSource = self
-        view.backgroundColor = UIColor.lightBlue()
+        applyGradientLayer()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

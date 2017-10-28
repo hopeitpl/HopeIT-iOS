@@ -24,12 +24,13 @@ class PaymentViewController: UIViewController {
         super.viewDidLoad()
         
         setReactiveBindings()
+        applyGradientLayer()
         
         let numberToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 50))
         numberToolbar.barStyle = UIBarStyle.default
         numberToolbar.items = [
             UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil),
-            UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.plain, target: self, action: #selector(closeKeyboard))]
+            UIBarButtonItem(title: "Gotowe", style: UIBarButtonItemStyle.plain, target: self, action: #selector(closeKeyboard))]
         numberToolbar.sizeToFit()
         amountField.inputAccessoryView = numberToolbar
         

@@ -15,7 +15,7 @@ struct HomeViewModel {
     let balance = Variable<Int?>(nil)
     
     func fetchHomeScreen() {
-        let url = "http://10.99.130.92:8000/users/1/goal"
+        let url = "http://\(URLs.apiPrefix)/users/1/goal"
         Alamofire.request(url).responseJSON { response in
             print(response)
             if response.result.isSuccess, Utilities.isStatusValid(code: response.response?.statusCode) {
