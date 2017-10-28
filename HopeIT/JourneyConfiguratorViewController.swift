@@ -70,9 +70,8 @@ class JourneyConfiguratorViewController: UIViewController {
         let url = "http://\(URLs.apiPrefix)/users/1/goal/"
         let params: Parameters = ["user_id": 1, "target": self.viewModel.value.value, "months": self.viewModel.duration.value, "notify_freq": self.intervalSwitch.isOn ? 7 : 30]
         Alamofire.request(url, method: .post, parameters: params,
-            encoding: JSONEncoding.default).responseJSON { response in
-            print(response)
-            if response.result.isSuccess, Utilities.isStatusValid(code: response.response?.statusCode) {
+            encoding: JSONEncoding.default).responseString { [unowned self] response in
+            if let resp = response.response, Utilities.isStatusValid(code: resp.statusCode) {
                 self.navigationController?.dismiss(animated: true, completion: {
                     HUD.flash(.success, delay: 1.0)
                 })

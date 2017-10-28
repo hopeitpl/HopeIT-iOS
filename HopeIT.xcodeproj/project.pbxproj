@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B3A4EABB5F5ED2B1A598BD55 /* Pods_HopeIT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 547E87F678DD9DD563F30F55 /* Pods_HopeIT.framework */; };
+		DD176C441FA4A05300685A93 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD176C431FA4A05300685A93 /* StatisticsViewController.swift */; };
+		DD176C461FA4A22400685A93 /* StaitstisticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD176C451FA4A22400685A93 /* StaitstisticsViewModel.swift */; };
 		DDA41DB21FA3764B007AE81D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA41DB11FA3764B007AE81D /* AppDelegate.swift */; };
 		DDA41DB41FA3764B007AE81D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA41DB31FA3764B007AE81D /* ViewController.swift */; };
 		DDA41DB71FA3764B007AE81D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDA41DB51FA3764B007AE81D /* Main.storyboard */; };
@@ -46,6 +48,8 @@
 		547E87F678DD9DD563F30F55 /* Pods_HopeIT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HopeIT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC03EF05440EFAA899E27CB /* Pods-HopeIT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HopeIT.release.xcconfig"; path = "Pods/Target Support Files/Pods-HopeIT/Pods-HopeIT.release.xcconfig"; sourceTree = "<group>"; };
 		AACE9BDAB7724BFF90753561 /* Pods-HopeIT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HopeIT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HopeIT/Pods-HopeIT.debug.xcconfig"; sourceTree = "<group>"; };
+		DD176C431FA4A05300685A93 /* StatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
+		DD176C451FA4A22400685A93 /* StaitstisticsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaitstisticsViewModel.swift; sourceTree = "<group>"; };
 		DDA41DAE1FA3764B007AE81D /* HopeIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HopeIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDA41DB11FA3764B007AE81D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDA41DB31FA3764B007AE81D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +176,8 @@
 				DDDDAC9D1FA3D3FD006C9CBA /* CustomTabBarController.swift */,
 				DDE767931FA47F0600A6909D /* FundacjaViewController.swift */,
 				DDE767951FA4896500A6909D /* CustomCell.swift */,
+				DD176C431FA4A05300685A93 /* StatisticsViewController.swift */,
+				DD176C451FA4A22400685A93 /* StaitstisticsViewModel.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -405,7 +411,9 @@
 				DDA41DD71FA39925007AE81D /* Journey.swift in Sources */,
 				DDDDACA41FA3FC6B006C9CBA /* RecurringViewController.swift in Sources */,
 				DDDDACAF1FA44986006C9CBA /* MessagesViewController.swift in Sources */,
+				DD176C461FA4A22400685A93 /* StaitstisticsViewModel.swift in Sources */,
 				DDE767961FA4896500A6909D /* CustomCell.swift in Sources */,
+				DD176C441FA4A05300685A93 /* StatisticsViewController.swift in Sources */,
 				DDA41DC91FA3924F007AE81D /* TutorialViewController.swift in Sources */,
 				DDDDAC9E1FA3D3FD006C9CBA /* CustomTabBarController.swift in Sources */,
 				DDDDAC9C1FA3D2D3006C9CBA /* Extensions.swift in Sources */,

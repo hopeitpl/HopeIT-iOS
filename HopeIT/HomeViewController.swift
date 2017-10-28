@@ -78,7 +78,7 @@ class HomeViewController: UIViewController {
                 return
             }
             self.balanceLabel.text = "\(balance) PLN"
-            self.progressBar.setProgress(Float(balance), animated: true)
+            self.progressBar.setProgress(Float(balance), animated: false)
         }).addDisposableTo(disposeBag)
         
         homeViewModel.target.asObservable().subscribe(onNext: { [unowned self] in
@@ -86,7 +86,7 @@ class HomeViewController: UIViewController {
                 self.widgetView.isHidden = true
                 return
             }
-            self.topLabel.text = "\(target)"
+            self.topLabel.text = "\(target) PLN"
             self.widgetView.isHidden = false
         }).addDisposableTo(disposeBag)
         
@@ -125,6 +125,7 @@ class HomeViewController: UIViewController {
         widgetView.layer.cornerRadius = 20.0
         widgetView.clipsToBounds = true
         widgetView.dropShadow()
+        logo.dropShadow()
         addPaymentView.layer.cornerRadius = 30.0
         addPaymentView.clipsToBounds = true
         addPaymentView.dropShadow()

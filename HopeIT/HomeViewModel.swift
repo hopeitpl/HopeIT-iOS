@@ -23,6 +23,9 @@ struct HomeViewModel {
                     if let target = JSON["target"] as? Int, let balance = JSON["balance"] as? Int {
                         self.target.value = target
                         self.balance.value = balance
+                    } else {
+                        self.target.value = nil
+                        self.balance.value = nil
                     }
                 }
             }

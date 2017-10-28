@@ -203,48 +203,45 @@
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WNG-aY-Zrz">
-                                        <rect key="frame" x="0.0" y="172.5" width="280" height="135"/>
+                                        <rect key="frame" x="0.0" y="169" width="280" height="141"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 PLN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycB-Xe-VPm">
-                                                <rect key="frame" x="65" y="51.5" width="150" height="49"/>
+                                                <rect key="frame" x="65" y="58.5" width="150" height="49"/>
                                                 <fontDescription key="fontDescription" name="DKCrayonCrumble" family="DK Crayon Crumble" pointSize="50"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stan misji" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYA-si-OIQ">
-                                                <rect key="frame" x="91.5" y="16" width="97.5" height="27.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="27.5" id="8RZ-Sh-cyU"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="DKCrayonCrumble" family="DK Crayon Crumble" pointSize="28"/>
+                                                <rect key="frame" x="80" y="16" width="121.5" height="34.5"/>
+                                                <fontDescription key="fontDescription" name="DKCrayonCrumble" family="DK Crayon Crumble" pointSize="35"/>
                                                 <color key="textColor" red="0.87843137250000003" green="0.019607843140000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fuk-S0-rlO">
-                                                <rect key="frame" x="59.5" y="108.5" width="161" height="2"/>
+                                                <rect key="frame" x="59.5" y="115.5" width="161" height="2"/>
                                                 <color key="progressTintColor" red="0.87843137250000003" green="0.019607843140000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                                             </progressView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 PLN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vIU-tc-pPi">
-                                                <rect key="frame" x="16" y="103" width="39.5" height="12"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <rect key="frame" x="16" y="111" width="39.5" height="10"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2500 PLN" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6HZ-eX-dwS">
-                                                <rect key="frame" x="224.5" y="104.5" width="39.5" height="10"/>
+                                                <rect key="frame" x="224.5" y="111.5" width="39.5" height="10"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="przyladek" translatesAutoresizingMaskIntoConstraints="NO" id="uAJ-0C-NHE">
-                                                <rect key="frame" x="223" y="66" width="20" height="20"/>
+                                                <rect key="frame" x="223" y="73" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="BYW-jt-WZX"/>
                                                     <constraint firstAttribute="width" constant="20" id="b10-h6-xFF"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="przyladek" translatesAutoresizingMaskIntoConstraints="NO" id="PVj-zE-ars">
-                                                <rect key="frame" x="37" y="66" width="20" height="20"/>
+                                                <rect key="frame" x="37" y="73" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="1PH-bZ-ajN"/>
                                                     <constraint firstAttribute="width" constant="20" id="gGq-EG-M5B"/>
@@ -455,7 +452,7 @@ odliczanie!</string>
         <!--Statystyki-->
         <scene sceneID="ms0-7R-dWF">
             <objects>
-                <viewController id="lIY-fq-VSj" sceneMemberID="viewController">
+                <viewController id="lIY-fq-VSj" customClass="StatisticsViewController" customModule="HopeIT" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Cvc-nc-bIT"/>
                         <viewControllerLayoutGuide type="bottom" id="neJ-gh-XVw"/>
@@ -463,13 +460,104 @@ odliczanie!</string>
                     <view key="view" contentMode="scaleToFill" id="Wuv-wk-Lch">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="USn-Q4-BN9">
+                                <rect key="frame" x="30" y="50" width="260" height="375"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wielkie dzięki!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gc0-GQ-Agv">
+                                        <rect key="frame" x="0.0" y="0.0" width="260" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jbc-gV-4vd">
+                                        <rect key="frame" x="0.0" y="48" width="260" height="20"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="hvr-J8-vyc"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0b4-YD-P33">
+                                        <rect key="frame" x="0.0" y="68" width="260" height="41"/>
+                                        <string key="text">Dokonałeś przelewów 
+na łączną kwotę</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMy-Sa-8qn">
+                                        <rect key="frame" x="0.0" y="109" width="260" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o46-zw-Gcq">
+                                        <rect key="frame" x="0.0" y="157" width="260" height="20"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="cDB-4T-kLH"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqZ-L2-NHa">
+                                        <rect key="frame" x="0.0" y="177" width="260" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ffk-bQ-rBP">
+                                        <rect key="frame" x="0.0" y="225" width="260" height="41"/>
+                                        <string key="text">Tyle osobistych 
+celów osiągnąłeś</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xcc-Iy-sDa">
+                                        <rect key="frame" x="0.0" y="266" width="260" height="20"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="4av-tW-VFJ"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJq-Tj-sTM">
+                                        <rect key="frame" x="0.0" y="286" width="260" height="41"/>
+                                        <string key="text">A tyle razy łącznie 
+wspomogłeś Fundację</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZD-bF-Q0H">
+                                        <rect key="frame" x="0.0" y="327" width="260" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_naratunek" translatesAutoresizingMaskIntoConstraints="NO" id="KD9-mY-ENj">
+                                <rect key="frame" x="108" y="470" width="196" height="41"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.031372549020000001" green="0.30588235289999999" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="neJ-gh-XVw" firstAttribute="top" secondItem="KD9-mY-ENj" secondAttribute="bottom" constant="8" id="RDB-v8-jzN"/>
+                            <constraint firstAttribute="trailing" secondItem="USn-Q4-BN9" secondAttribute="trailing" constant="30" id="VW9-rt-AcS"/>
+                            <constraint firstItem="USn-Q4-BN9" firstAttribute="top" secondItem="Cvc-nc-bIT" secondAttribute="bottom" constant="30" id="XDL-F5-H4r"/>
+                            <constraint firstItem="USn-Q4-BN9" firstAttribute="leading" secondItem="Wuv-wk-Lch" secondAttribute="leading" constant="30" id="ft8-zP-nH7"/>
+                            <constraint firstAttribute="trailing" secondItem="KD9-mY-ENj" secondAttribute="trailing" constant="16" id="yxj-LS-6L3"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Statystyki" image="statistics" id="q77-AZ-R9c"/>
+                    <connections>
+                        <outlet property="totalAmountLabel" destination="tMy-Sa-8qn" id="l26-rb-iVR"/>
+                        <outlet property="totalGoalsLAbel" destination="hqZ-L2-NHa" id="nsW-A4-IVD"/>
+                        <outlet property="totalTransfersLabel" destination="sZD-bF-Q0H" id="5oh-0J-lLf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h7O-Qz-7TF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4129" y="133"/>
+            <point key="canvasLocation" x="4128.75" y="132.04225352112675"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="I9b-lX-uJq">
@@ -726,19 +814,23 @@ odliczanie!</string>
                                 </state>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chlopczyk" translatesAutoresizingMaskIntoConstraints="NO" id="LKC-2M-JMy">
-                                <rect key="frame" x="110" y="365" width="100" height="96"/>
+                                <rect key="frame" x="204" y="398" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="HoA-h9-ySe"/>
+                                    <constraint firstAttribute="width" constant="100" id="dBt-vv-xUr"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.031372549020000001" green="0.30588235289999999" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="LKC-2M-JMy" firstAttribute="centerX" secondItem="eqv-Qe-9vF" secondAttribute="centerX" id="5le-3h-Fqx"/>
                             <constraint firstItem="CoN-Oh-ihf" firstAttribute="leading" secondItem="eqv-Qe-9vF" secondAttribute="leading" constant="16" id="ENd-SG-EHh"/>
                             <constraint firstItem="cbV-bm-auo" firstAttribute="leading" secondItem="eqv-Qe-9vF" secondAttribute="leading" constant="16" id="GZT-Tv-KPL"/>
                             <constraint firstItem="9th-us-xJq" firstAttribute="top" secondItem="CoN-Oh-ihf" secondAttribute="bottom" constant="20" id="H6C-my-9QP"/>
+                            <constraint firstItem="CoN-Oh-ihf" firstAttribute="top" secondItem="LKC-2M-JMy" secondAttribute="bottom" id="IF1-t0-hL4"/>
                             <constraint firstAttribute="trailing" secondItem="CoN-Oh-ihf" secondAttribute="trailing" constant="16" id="Klz-Un-cSI"/>
-                            <constraint firstItem="LKC-2M-JMy" firstAttribute="top" secondItem="cbV-bm-auo" secondAttribute="bottom" constant="8" id="PCT-xm-P9X"/>
                             <constraint firstItem="cbV-bm-auo" firstAttribute="top" secondItem="re3-6L-bW3" secondAttribute="bottom" constant="8" id="kgV-ux-OfM"/>
                             <constraint firstAttribute="trailing" secondItem="cbV-bm-auo" secondAttribute="trailing" constant="16" id="qxp-Qk-Ppe"/>
+                            <constraint firstAttribute="trailing" secondItem="LKC-2M-JMy" secondAttribute="trailing" constant="16" id="tHQ-im-GVo"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dyy-2j-pFI">
@@ -1069,69 +1161,98 @@ odliczanie!</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AnI-mj-jDH">
-                                <rect key="frame" x="30" y="36" width="260" height="275"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Avr-cJ-2kj">
+                                <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rocket300x300" translatesAutoresizingMaskIntoConstraints="NO" id="yGT-d8-Zxm">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="VBU-DX-rrL"/>
-                                            <constraint firstAttribute="width" constant="100" id="WNQ-6X-n0H"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chlopczyk" translatesAutoresizingMaskIntoConstraints="NO" id="4Xn-cc-M9a">
-                                        <rect key="frame" x="160" y="175" width="100" height="100"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="5QV-ij-r9u"/>
-                                            <constraint firstAttribute="width" constant="100" id="wGN-Ij-ARw"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="przyladek" translatesAutoresizingMaskIntoConstraints="NO" id="CKv-MO-ccG">
-                                        <rect key="frame" x="0.0" y="245" width="30" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="30" id="I6A-5J-wpx"/>
-                                            <constraint firstAttribute="height" constant="30" id="TMy-Ne-cll"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="4Xn-cc-M9a" secondAttribute="trailing" id="1ES-aL-AvC"/>
-                                    <constraint firstItem="yGT-d8-Zxm" firstAttribute="leading" secondItem="AnI-mj-jDH" secondAttribute="leading" id="2ct-iL-c69"/>
-                                    <constraint firstAttribute="bottom" secondItem="4Xn-cc-M9a" secondAttribute="bottom" id="5tb-g3-Ys6"/>
-                                    <constraint firstAttribute="bottom" secondItem="CKv-MO-ccG" secondAttribute="bottom" id="CO9-0s-9jF"/>
-                                    <constraint firstItem="4Xn-cc-M9a" firstAttribute="top" secondItem="yGT-d8-Zxm" secondAttribute="bottom" constant="75" id="JJf-gT-4Im"/>
-                                    <constraint firstItem="yGT-d8-Zxm" firstAttribute="top" secondItem="AnI-mj-jDH" secondAttribute="top" id="hoT-Li-xp0"/>
-                                    <constraint firstItem="CKv-MO-ccG" firstAttribute="leading" secondItem="AnI-mj-jDH" secondAttribute="leading" id="zuf-v0-257"/>
-                                </constraints>
-                            </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="muN-Td-Z9N">
-                                <rect key="frame" x="16" y="327" width="288" height="192"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <string key="text">Czy w dzieciństwie zdarzało Ci się zadzierać głowę, i obserwując nocne, rozgwieżdżone niebo, marzyć o odkrywaniu jego tajemnic? 
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TTh-mp-v20">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="834.5"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="muN-Td-Z9N">
+                                                <rect key="frame" x="16" y="283" width="288" height="543.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <mutableString key="text">Czy w dzieciństwie zdarzało Ci się zadzierać głowę, i obserwując nocne, rozgwieżdżone niebo, marzyć o odkrywaniu jego tajemnic? 
 
 Dziś także wielu młodych zdobywców śni o promach kosmicznych, nieodkrytych planetach i wielkich międzygwiezdnych przygodach. 
 
 Jednak kosmos bywa ogromnym i nieprzyjaznym miejscem, a w jego zimnych czeluściach kryją się straszliwi przeciwnicy małych, kosmicznych wędrowców - choroby nowotworowe. 
 
-Czy TY możesz wesprzeć ich w walce z nimi? TAK! Razem z fundacją Na Ratunek pomóż wyposażyć oddziały onkologii i hematologii dziecięcej i przyczyń się do sukcesu misji małych astronautów!</string>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+Czy TY możesz wesprzeć ich w walce z nimi? 
+
+TAK! Razem z fundacją Na Ratunek pomóż wyposażyć oddziały onkologii i hematologii dziecięcej i przyczyń się do sukcesu misji małych astronautów!</mutableString>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AnI-mj-jDH">
+                                                <rect key="frame" x="30" y="0.0" width="260" height="275"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rocket300x300" translatesAutoresizingMaskIntoConstraints="NO" id="yGT-d8-Zxm">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="100" id="VBU-DX-rrL"/>
+                                                            <constraint firstAttribute="width" constant="100" id="WNQ-6X-n0H"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chlopczyk" translatesAutoresizingMaskIntoConstraints="NO" id="4Xn-cc-M9a">
+                                                        <rect key="frame" x="160" y="175" width="100" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="100" id="5QV-ij-r9u"/>
+                                                            <constraint firstAttribute="width" constant="100" id="wGN-Ij-ARw"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="przyladek" translatesAutoresizingMaskIntoConstraints="NO" id="CKv-MO-ccG">
+                                                        <rect key="frame" x="0.0" y="245" width="30" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="30" id="I6A-5J-wpx"/>
+                                                            <constraint firstAttribute="height" constant="30" id="TMy-Ne-cll"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="4Xn-cc-M9a" secondAttribute="trailing" id="1ES-aL-AvC"/>
+                                                    <constraint firstItem="yGT-d8-Zxm" firstAttribute="leading" secondItem="AnI-mj-jDH" secondAttribute="leading" id="2ct-iL-c69"/>
+                                                    <constraint firstAttribute="bottom" secondItem="4Xn-cc-M9a" secondAttribute="bottom" id="5tb-g3-Ys6"/>
+                                                    <constraint firstAttribute="bottom" secondItem="CKv-MO-ccG" secondAttribute="bottom" id="CO9-0s-9jF"/>
+                                                    <constraint firstItem="4Xn-cc-M9a" firstAttribute="top" secondItem="yGT-d8-Zxm" secondAttribute="bottom" constant="75" id="JJf-gT-4Im"/>
+                                                    <constraint firstItem="yGT-d8-Zxm" firstAttribute="top" secondItem="AnI-mj-jDH" secondAttribute="top" id="hoT-Li-xp0"/>
+                                                    <constraint firstItem="CKv-MO-ccG" firstAttribute="leading" secondItem="AnI-mj-jDH" secondAttribute="leading" id="zuf-v0-257"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="muN-Td-Z9N" secondAttribute="trailing" constant="16" id="22Q-Qx-6JN"/>
+                                            <constraint firstAttribute="trailing" secondItem="AnI-mj-jDH" secondAttribute="trailing" constant="30" id="4a4-Wk-YKW"/>
+                                            <constraint firstItem="AnI-mj-jDH" firstAttribute="leading" secondItem="TTh-mp-v20" secondAttribute="leading" constant="30" id="ZIe-zb-ZJl"/>
+                                            <constraint firstAttribute="bottom" secondItem="muN-Td-Z9N" secondAttribute="bottom" constant="8" id="g8k-Dg-NUZ"/>
+                                            <constraint firstItem="AnI-mj-jDH" firstAttribute="top" secondItem="TTh-mp-v20" secondAttribute="top" id="neX-7a-Txg"/>
+                                            <constraint firstItem="muN-Td-Z9N" firstAttribute="top" secondItem="AnI-mj-jDH" secondAttribute="bottom" constant="8" id="qHT-KH-s8g"/>
+                                            <constraint firstItem="muN-Td-Z9N" firstAttribute="leading" secondItem="TTh-mp-v20" secondAttribute="leading" constant="16" id="sl5-eR-AOs"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="TTh-mp-v20" firstAttribute="top" secondItem="Avr-cJ-2kj" secondAttribute="top" id="Ky9-Sk-xRH"/>
+                                    <constraint firstItem="TTh-mp-v20" firstAttribute="leading" secondItem="Avr-cJ-2kj" secondAttribute="leading" id="QYn-JJ-WBF"/>
+                                    <constraint firstAttribute="trailing" secondItem="TTh-mp-v20" secondAttribute="trailing" id="R3Q-Tq-MWD"/>
+                                    <constraint firstAttribute="bottom" secondItem="TTh-mp-v20" secondAttribute="bottom" id="g0Q-Cu-pkd"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="AnI-mj-jDH" firstAttribute="top" secondItem="2kN-vL-OTk" secondAttribute="bottom" constant="16" id="C13-5f-tTE"/>
-                            <constraint firstItem="muN-Td-Z9N" firstAttribute="top" secondItem="AnI-mj-jDH" secondAttribute="bottom" constant="16" id="Lng-JE-mH6"/>
-                            <constraint firstItem="ldi-2q-lsf" firstAttribute="top" secondItem="muN-Td-Z9N" secondAttribute="bottom" id="XEY-ui-8ma"/>
-                            <constraint firstItem="muN-Td-Z9N" firstAttribute="leading" secondItem="8bq-eh-bx3" secondAttribute="leading" constant="16" id="dnN-bw-n5b"/>
-                            <constraint firstAttribute="trailing" secondItem="muN-Td-Z9N" secondAttribute="trailing" constant="16" id="ie7-hs-ve6"/>
-                            <constraint firstItem="AnI-mj-jDH" firstAttribute="centerX" secondItem="8bq-eh-bx3" secondAttribute="centerX" id="jCf-WU-tMi"/>
-                            <constraint firstItem="AnI-mj-jDH" firstAttribute="leading" secondItem="8bq-eh-bx3" secondAttribute="leading" constant="30" id="yb5-Ci-QrQ"/>
+                            <constraint firstAttribute="trailing" secondItem="Avr-cJ-2kj" secondAttribute="trailing" id="5Sg-2K-XDr"/>
+                            <constraint firstItem="Avr-cJ-2kj" firstAttribute="top" secondItem="2kN-vL-OTk" secondAttribute="bottom" id="J7V-nu-RgN"/>
+                            <constraint firstItem="Avr-cJ-2kj" firstAttribute="leading" secondItem="8bq-eh-bx3" secondAttribute="leading" id="dEh-2G-tbh"/>
+                            <constraint firstItem="TTh-mp-v20" firstAttribute="width" secondItem="8bq-eh-bx3" secondAttribute="width" id="xze-5x-73y"/>
+                            <constraint firstItem="ldi-2q-lsf" firstAttribute="top" secondItem="Avr-cJ-2kj" secondAttribute="bottom" id="zuu-p3-i7B"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Fundacja" image="przyladek" id="9ml-1a-lAu"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T4Z-JM-iaP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1144,6 +1265,7 @@ Czy TY możesz wesprzeć ich w walce z nimi? TAK! Razem z fundacją Na Ratunek p
         <image name="history" width="30" height="30"/>
         <image name="kreda1" width="56" height="100"/>
         <image name="ksiezyc" width="16" height="16"/>
+        <image name="logo_naratunek" width="196" height="41"/>
         <image name="messages" width="30" height="30"/>
         <image name="mission" width="30" height="30"/>
         <image name="przyladek" width="29" height="28"/>

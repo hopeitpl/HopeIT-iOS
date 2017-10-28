@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import BRYXBanner
+import PKHUD
 
 class MessagesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -36,6 +37,7 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
     @objc private func getMessages() {
         tabBarItem.badgeValue = nil
         let url = "http://\(URLs.apiPrefix)/messages/user/1"
+        HUD.show(.progress)
         Alamofire.request(url).responseJSON { response in
             print(response)
             if response.result.isSuccess, Utilities.isStatusValid(code: response.response?.statusCode) {
@@ -56,6 +58,7 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
                     self.tableView.reloadData()
                 }
             }
+            HUD.hide()
         }
     }
     

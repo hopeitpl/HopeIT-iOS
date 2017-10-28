@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import PKHUD
 
 class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -53,6 +54,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @objc private func getHistory() {
         let url = "http://\(URLs.apiPrefix)/payments/1"
+        HUD.show(.progress)
         Alamofire.request(url).responseJSON { response in
             print(response)
             if response.result.isSuccess, Utilities.isStatusValid(code: response.response?.statusCode) {
@@ -67,6 +69,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
                     self.tableView.reloadData()
                 }
             }
+            HUD.hide()
         }
     }
     

@@ -65,7 +65,7 @@ class JourneysViewController: UIViewController, UITableViewDelegate, UITableView
         
         let alertVC = UIAlertController(title: "Rozpoczynasz wyprawę", message: "Twoim celem jest wpłacenie \(journey.desc) na cel Fundacji. Startujemy?", preferredStyle: .actionSheet)
         
-        let yesAction = UIAlertAction(title: "Zapłon!", style: .default) { _ in
+        let yesAction = UIAlertAction(title: "Odpalać silniki!", style: .default) { _ in
             self.post(journey: journey)
         }
         
@@ -87,9 +87,8 @@ class JourneysViewController: UIViewController, UITableViewDelegate, UITableView
         let url = "http://\(URLs.apiPrefix)/users/1/goal/"
         let params: Parameters = ["user_id": 1, "target": journey.value, "months": journey.installments, "notify_freq": journey.notificationInterval == .week ? 7 : 30]
         Alamofire.request(url, method: .post, parameters: params,
-                          encoding: JSONEncoding.default).responseJSON { response in
-                            print(response)
-                            if response.result.isSuccess, Utilities.isStatusValid(code: response.response?.statusCode) {
+                          encoding: JSONEncoding.default).responseString { [unowned self] response in
+                            if let resp = response.response, Utilities.isStatusValid(code: resp.statusCode) {
                                 self.navigationController?.dismiss(animated: true, completion: {
                                     HUD.flash(.success, delay: 1.0)
                                 })

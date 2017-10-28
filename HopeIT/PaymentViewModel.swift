@@ -16,7 +16,7 @@ struct PaymentViewModel {
     
     func post(amount: Int, description: String = "user:1") {
         let url = "http://\(URLs.apiPrefix)/payments/"
-        let params: Parameters = ["amount": amount, "description": description]
+        let params: Parameters = ["amount": "\(amount).00", "description": description]
         Alamofire.request(url, method: .post, parameters: params,
                           encoding: JSONEncoding.default).responseJSON { response in
             print(response)
