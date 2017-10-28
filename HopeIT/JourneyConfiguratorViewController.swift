@@ -72,9 +72,7 @@ class JourneyConfiguratorViewController: UIViewController {
         Alamofire.request(url, method: .post, parameters: params,
             encoding: JSONEncoding.default).responseString { [unowned self] response in
             if let resp = response.response, Utilities.isStatusValid(code: resp.statusCode) {
-                self.navigationController?.dismiss(animated: true, completion: {
-                    HUD.flash(.success, delay: 1.0)
-                })
+                self.navigationController?.dismiss(animated: true)
             } else {
                 HUD.flash(.error, delay: 1.0)
             }

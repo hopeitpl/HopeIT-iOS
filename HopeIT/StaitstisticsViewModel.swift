@@ -8,7 +8,6 @@
 
 import RxSwift
 import Alamofire
-import PKHUD
 
 struct StatisticsViewModel {
     
@@ -20,7 +19,6 @@ struct StatisticsViewModel {
     
     func getStatistics() {
         let url = "http://\(URLs.apiPrefix)/users/1/stats"
-        HUD.show(.progress)
         Alamofire.request(url).responseJSON { response in
             print(response)
             if response.result.isSuccess, Utilities.isStatusValid(code: response.response?.statusCode) {
@@ -30,7 +28,6 @@ struct StatisticsViewModel {
                     self.finishedGoals.value = JSON["finished_goals"] ?? 0
                 }
             }
-            HUD.hide()
         }
     }
     
