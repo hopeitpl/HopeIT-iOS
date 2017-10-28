@@ -74,7 +74,13 @@ class HomeViewController: UIViewController {
             .addDisposableTo(disposeBag)
 
         addPaymentView.rx.tapGesture().when(.recognized).subscribe(onNext: { [unowned self] _ in
-            self.showOverlay()
+            
+            if self.homeViewModel.target.value == nil {
+                self.showOverlay()
+            } else {
+                self.paymentAction()
+            }
+            
         }).addDisposableTo(disposeBag)
         
         homeViewModel.balance.asObservable().subscribe(onNext: { [unowned self] in
