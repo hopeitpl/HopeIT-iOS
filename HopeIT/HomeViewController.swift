@@ -78,7 +78,9 @@ class HomeViewController: UIViewController {
                 return
             }
             self.balanceLabel.text = "\(balance) PLN"
-            self.progressBar.setProgress(Float(balance), animated: false)
+            guard let target = self.homeViewModel.target.value else { return }
+            let progress = Float(balance) / Float(target)
+            self.progressBar.setProgress(progress, animated: false)
         }).addDisposableTo(disposeBag)
         
         homeViewModel.target.asObservable().subscribe(onNext: { [unowned self] in
@@ -95,10 +97,12 @@ class HomeViewController: UIViewController {
     // MARK: Actions
     
     private func recurringAction() {
+        hideOverlay()
         (tabBarController as? CustomTabBarController)?.presentRecurring()
     }
     
     private func paymentAction() {
+        hideOverlay()
         (tabBarController as? CustomTabBarController)?.presentPayment()
     }
     
