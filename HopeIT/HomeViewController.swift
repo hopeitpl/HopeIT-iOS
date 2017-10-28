@@ -16,7 +16,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var balanceLabel: UILabel!
     @IBOutlet weak var widgetView: UIView!
-    
+
+    @IBOutlet weak var mars: UIImageView!
     @IBOutlet weak var logo: UIImageView!
     @IBOutlet weak var saturn: UIImageView!
     @IBOutlet weak var earth: UIImageView!
@@ -33,6 +34,9 @@ class HomeViewController: UIViewController {
         static let earthAnimKey = "earthAnim"
         static let saturnMoveKey = "saturnAnim"
         static let logoAnimKey = "logoAnim"
+        static let marsAnimKey = "marsAnim"
+        static let marsRotateKey = "marsRotateAnim"
+        static let marsMoveKey = "marsMoveKey"
         static let buttonAnimKey = "buttonAnim"
     }
     
@@ -138,6 +142,9 @@ class HomeViewController: UIViewController {
     }
     
     private func initAnimations() {
+        scale(view: mars, with: Constants.marsAnimKey, duration: 2.0)
+        move(view: mars, for: -100, with: Constants.marsMoveKey, duration: 20)
+        rotate(view: mars, with: Constants.marsRotateKey, duration: 30)
         scale(view: addPaymentView, with: Constants.buttonAnimKey, duration: 0.5)
         scale(view: logo, with: Constants.logoAnimKey, duration: 0.5)
         rotate(view: earth, with: Constants.earthAnimKey, duration: 100.0)
