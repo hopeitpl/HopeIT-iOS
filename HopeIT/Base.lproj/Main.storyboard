@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -399,7 +399,7 @@ odliczanie!</string>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wpisz kwotę" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="zBy-nc-gw5">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wpisz kwotę" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="zBy-nc-gw5">
                                         <rect key="frame" x="8" y="67" width="272" height="39"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -408,7 +408,7 @@ odliczanie!</string>
                                             <outlet property="delegate" destination="ark-8n-SUU" id="0bs-2l-ALl"/>
                                         </connections>
                                     </textField>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="przyladek" translatesAutoresizingMaskIntoConstraints="NO" id="agh-ne-yRL">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="przyladek" translatesAutoresizingMaskIntoConstraints="NO" id="agh-ne-yRL">
                                         <rect key="frame" x="129.5" y="114" width="29" height="28"/>
                                     </imageView>
                                 </subviews>
@@ -632,7 +632,7 @@ pomoże Ci zacząć</string>
             <objects>
                 <navigationController id="qoK-Cv-A6k" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="y4I-Co-TCK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </navigationBar>
@@ -675,16 +675,16 @@ pomoże Ci zacząć</string>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ecT-8G-zMg">
-                                                    <rect key="frame" x="23" y="81.5" width="274" height="60.5"/>
+                                                    <rect key="frame" x="30" y="81.5" width="260" height="60.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zrk-wW-8qM">
-                                                            <rect key="frame" x="0.0" y="0.0" width="274" height="34.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="260" height="34.5"/>
                                                             <fontDescription key="fontDescription" name="DKCrayonCrumble" family="DK Crayon Crumble" pointSize="35"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4z-rc-9NL">
-                                                            <rect key="frame" x="0.0" y="42.5" width="274" height="18"/>
+                                                            <rect key="frame" x="0.0" y="42.5" width="260" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -782,13 +782,13 @@ pomoże Ci zacząć</string>
                                                 <rect key="frame" x="0.0" y="0.0" width="256" height="24"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Czas trwania (miesiące)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIr-G3-CoR">
-                                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="24"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="163.5" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLh-BW-IE5">
-                                                        <rect key="frame" x="205.5" y="0.0" width="50.5" height="24"/>
+                                                        <rect key="frame" x="206.5" y="0.0" width="49.5" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -809,13 +809,13 @@ pomoże Ci zacząć</string>
                                                 <rect key="frame" x="0.0" y="98" width="256" height="24"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wartość (PLN)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqi-zO-bab">
-                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="24"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="100.5" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XWH-JG-jVe">
-                                                        <rect key="frame" x="205.5" y="0.0" width="50.5" height="24"/>
+                                                        <rect key="frame" x="206.5" y="0.0" width="49.5" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1169,11 +1169,11 @@ pomoże Ci zacząć</string>
                         <viewControllerLayoutGuide type="bottom" id="Ht9-bh-XHH"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="sFQ-G9-QIQ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBU-Ii-Ktr">
-                                <rect key="frame" x="16" y="220" width="288" height="299"/>
+                                <rect key="frame" x="16" y="220" width="288" height="348"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1241,7 +1241,7 @@ pomoże Ci zacząć</string>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="muN-Td-Z9N">
                                                 <rect key="frame" x="16" y="283" width="288" height="543.5"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <mutableString key="text">Czy w dzieciństwie zdarzało Ci się zadzierać głowę, i obserwując nocne, rozgwieżdżone niebo, marzyć o odkrywaniu jego tajemnic? 
+                                                <string key="text">Czy w dzieciństwie zdarzało Ci się zadzierać głowę, i obserwując nocne, rozgwieżdżone niebo, marzyć o odkrywaniu jego tajemnic? 
 
 Dziś także wielu młodych zdobywców śni o promach kosmicznych, nieodkrytych planetach i wielkich międzygwiezdnych przygodach. 
 
@@ -1249,7 +1249,7 @@ Jednak kosmos bywa ogromnym i nieprzyjaznym miejscem, a w jego zimnych czeluści
 
 Czy TY możesz wesprzeć ich w walce z nimi? 
 
-TAK! Razem z fundacją Na Ratunek pomóż wyposażyć oddziały onkologii i hematologii dziecięcej i przyczyń się do sukcesu misji małych astronautów!</mutableString>
+TAK! Razem z fundacją Na Ratunek pomóż wyposażyć oddziały onkologii i hematologii dziecięcej i przyczyń się do sukcesu misji małych astronautów!</string>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1335,15 +1335,15 @@ TAK! Razem z fundacją Na Ratunek pomóż wyposażyć oddziały onkologii i hema
         <image name="close" width="25" height="25"/>
         <image name="history" width="30" height="30"/>
         <image name="kreda1" width="56" height="100"/>
-        <image name="ksiezyc" width="16" height="16"/>
+        <image name="ksiezyc" width="100" height="100"/>
         <image name="logo_naratunek" width="196" height="41"/>
-        <image name="mars" width="16" height="16"/>
+        <image name="mars" width="100" height="100"/>
         <image name="messages" width="30" height="30"/>
         <image name="mission" width="30" height="30"/>
         <image name="przyladek" width="29" height="28"/>
         <image name="rocket300x300" width="100" height="100"/>
         <image name="saturn" width="100" height="47"/>
-        <image name="settings" width="16" height="16"/>
+        <image name="settings" width="33" height="33"/>
         <image name="statistics" width="30" height="30"/>
         <image name="ziemia" width="100" height="110"/>
     </resources>
